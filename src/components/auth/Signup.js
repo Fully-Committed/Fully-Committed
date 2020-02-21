@@ -1,20 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useAuthForm } from '../../hooks/useAuthForm';
 
 const Signup = () => {
 
-  const { userName, email, password, setEmail, setUserName, setPassword } = useSignupForm();
+  const { userName, email, password, setEmail, setUserName, setPassword, handleSubmit } = useAuthForm('signup');
 
   return (
-    <form onSubmit={}>
-      <input type="text" value={userName} onChange={({ target}) => setUserName(target.value)} />
-      <input type="text" value={email} onChange={({ target}) => setEmail(target.value)} />
-      <input type="password" value={password} onChange={({ target}) => setPassword(target.value)} />
+    <form onSubmit={handleSubmit}>
+      <label><input type="text" value={userName} onChange={({ target }) => setUserName(target.value)} />Username: </label>
+      <label><input type="text" value={email} onChange={({ target }) => setEmail(target.value)} />Email: </label>
+      <label><input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />Password: </label>
     </form>
-  )
+  );
 
 };
-
-Signup.propTypes = {};
 
 export default Signup;
