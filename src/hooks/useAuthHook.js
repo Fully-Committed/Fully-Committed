@@ -1,9 +1,8 @@
-import React, { createContext, useReducer, useEffect, useContext } from 'react';
+import React, { createContext, useEffect, useContext } from 'react';
 import { authReducer } from '../reducers/authReducer.js';
 import { signupUser, loginUser, verifyUser } from '../services/auth';
 import { setSession, setSessionError, setSessionLoading, setSessionDone } from '../actions/authActions';
 import { isAuthenticated, isLoading } from '../selectors/authSelectors';
-import Signup from '../components/auth/Signup.js';
 
 const AuthContext = createContext();
 
