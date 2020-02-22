@@ -11,3 +11,12 @@ export const signupUser = user => dispatch => {
       return dispatch(turnLoadingOff());
     });
 };
+
+
+/*Notes for monday
+
+- in actions, we need to make login user, verify user, and authenticate user? 
+- make reducer for authUser
+- make selector for authUser
+
+what about error?
