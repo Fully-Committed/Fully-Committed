@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authorizeUser } from '../actions/authActions';
@@ -15,7 +16,7 @@ export const useAuthForm = (type) => {
     const authFunction = (type === 'signup') ? getSignupUser : getLoginUser; 
 
     return dispatch(authorizeUser({ email, userName, password }, authFunction))
-      .then(() => window.location('https://github.com/login/oauth/authorize?client_id=c715bf39a4242ffcd1b9&scope=repo'));
+      .then(() => window.location(`https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=repo`));
   };
 
   return { email, setEmail, password, setPassword, userName, setUserName, handleSubmit };

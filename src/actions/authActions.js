@@ -1,6 +1,7 @@
 import { turnLoadingOn, turnLoadingOff } from './loadingActions';
 
 export const SET_USER_SESSION = 'SET_USER_SESSION';
+export const SET_SESSION_ERROR = 'SET_SESSION_ERROR';
 
 export const authorizeUser = (user, authFunction) => dispatch => {
   dispatch(turnLoadingOn());
@@ -8,19 +9,17 @@ export const authorizeUser = (user, authFunction) => dispatch => {
     .then(user => {
       dispatch({ type: SET_USER_SESSION, payload: user });
       return dispatch(turnLoadingOff());
-    }); 
+    })
+    .catch(error => dispatch({ type: SET_SESSION_ERROR, payload: error }));
 };
 
 
 
 
 
-/*Notes for monday
+/*Notes for afterlunch
 
 - in actions, we need to make verify user, and authenticate user? 
-- make reducer for authUser
-- make selector for authUser
-
-what about error?
-What about services?
+  - use effect that checks verify route with user from state as well as checking cookies for a user
+  - useEffect (in useVerify hook) called on every page
 */

@@ -14,8 +14,9 @@ export const AuthProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    dispatch(setSession());
+    dispatch(setSessionLoading());
     verifyUser()
+    //calls verify route and sets returned used in state
       .then(user => dispatch(setSession(user)))
       .catch(() => dispatch(setSessionDone()));
   }, []);
