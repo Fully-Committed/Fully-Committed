@@ -3,7 +3,7 @@ import { useVerifyUser } from '../hooks/useVerifyUser';
 import { AuthPage } from './auth/AuthPage';
 
 export default function App() {
-  //useVerifyUser();
+  useVerifyUser();
   return (
     <>
       <AuthPage />
