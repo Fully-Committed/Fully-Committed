@@ -1,4 +1,4 @@
-import { toGetLoading } from './useSelectors';
+import { toGetLoading, toGetUserSession } from './useSelectors';
 
 describe('selectors', () => {
   it('can return correct loading info from state', () => {
@@ -9,5 +9,14 @@ describe('selectors', () => {
     };
 
     expect(toGetLoading(state)).toEqual(false);
+  });
+
+  it('cant return the correct user info from state', () => {
+    const state = {
+      authReducer: {
+        user: null
+      }
+    };
+    expect(toGetUserSession(state)).toEqual(null);
   });
 });

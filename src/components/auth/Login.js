@@ -9,6 +9,7 @@ const Login = () => {
     <form onSubmit={handleSubmit}>
       <label><input type="text" value={email} onChange={({ target }) => setEmail(target.value)} />Email: </label>
       <label><input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />Password: </label>
+      <button>Login</button>
     </form>
   );
 

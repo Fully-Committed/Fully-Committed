@@ -1,4 +1,4 @@
-import { SIGNUP_USER, signupUser, LOGIN_USER, loginUser } from './authActions';
+import { signupUser, loginUser, SET_USER_SESSION } from './authActions';
 
 jest.mock('../services/authServices');
 
@@ -10,7 +10,7 @@ describe('Auth actions', () => {
     return action(dispatch)
       .then(() => {
         expect(dispatch).toHaveBeenCalledWith({
-          type: SIGNUP_USER,
+          type: SET_USER_SESSION,
           payload: {
             email: 'jbj@jbj.com',
             userName: 'JBJ'
@@ -26,7 +26,7 @@ describe('Auth actions', () => {
     return action(dispatch)
       .then(() => {
         expect(dispatch).toHaveBeenCalledWith({
-          type: LOGIN_USER,
+          type: SET_USER_SESSION,
           payload: {
             email: 'jbj@jbj.com'
           }

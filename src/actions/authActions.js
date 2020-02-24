@@ -1,26 +1,18 @@
 import { turnLoadingOn, turnLoadingOff } from './loadingActions';
-import { getSignupUser, getLoginUser } from '../services/authServices';
 
-export const SIGNUP_USER = 'SIGNUP_USER';
-export const LOGIN_USER = 'LOGIN_USER';
+export const SET_USER_SESSION = 'SET_USER_SESSION';
 
-export const signupUser = user => dispatch => {
+export const authorizeUser = (user, authFunction) => dispatch => {
   dispatch(turnLoadingOn());
-  return getSignupUser(user)
+  return authFunction(user)
     .then(user => {
-      dispatch({ type: SIGNUP_USER, payload: user });
+      dispatch({ type: SET_USER_SESSION, payload: user });
       return dispatch(turnLoadingOff());
-    });
+    }); 
 };
 
-export const loginUser = user =>dispatch => {
-  dispatch(turnLoadingOn());
-  return getLoginUser(user)
-    .then(user => {
-      dispatch({ type: LOGIN_USER, payload: user });
-      return dispatch(turnLoadingOff());
-    });
-};
+
+
 
 
 /*Notes for monday

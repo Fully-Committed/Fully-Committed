@@ -1,5 +1,5 @@
 const request = (path, method, body) => {
-  return fetch(`https://https://commit-kitty-be-dev.herokuapp.com${path}`, {
+  return fetch(`http://localhost:7890${path}`, {
     method,
     headers: {
       'Content-Type': 'application/json'
@@ -16,6 +16,5 @@ const request = (path, method, body) => {
 
 
 export const getSignupUser = user => request('/api/v1/auth/signup', 'POST', user);
-
 
 export const getLoginUser = user => request('/api/v1/auth/login', 'POST', user);

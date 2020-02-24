@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582569336030" clover="3.2.0">
-  <project timestamp="1582569336031" name="All files">
-    <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8" elements="24" coveredelements="24" complexity="0" loc="16" ncloc="16" packages="1" files="2" classes="2"/>
-    <file name="authActions.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\authActions.js">
-      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
-    </file>
-    <file name="loadingActions.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\loadingActions.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+<coverage generated="1582570661260" clover="3.2.0">
+  <project timestamp="1582570661260" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="4" coveredelements="4" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
+    <file name="useSelectors.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\selectors\useSelectors.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
