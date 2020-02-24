@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { signupUser } from '../actions/authActions';
 
 export const useAuthForm = (type) => {
   const [email, setEmail] = useState('');
