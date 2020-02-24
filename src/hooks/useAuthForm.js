@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authorizeUser } from '../actions/authActions';
+import { authorizeUser, SET_SESSION_ERROR } from '../actions/authActions';
 import { getSignupUser, getLoginUser } from '../services/authServices';
 
 export const useAuthForm = (type) => {
@@ -16,7 +15,13 @@ export const useAuthForm = (type) => {
     const authFunction = (type === 'signup') ? getSignupUser : getLoginUser; 
 
     return dispatch(authorizeUser({ email, userName, password }, authFunction))
-      .then(() => window.location(`https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=repo`));
+      .then(res => {
+        if(res.type === SET_SESSION_ERROR) {
+          throw new Error('Something went wrong!!!');
+        } else {
+          window.location.href = ('https://github.com/login/oauth/authorize?client_id=c715bf39a4242ffcd1b9&scope=repo');
+        }
+      });
   };
 
   return { email, setEmail, password, setPassword, userName, setUserName, handleSubmit };

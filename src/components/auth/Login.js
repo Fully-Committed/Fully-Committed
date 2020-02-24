@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthForm } from '../../hooks/useAuthForm';
 
-const Login = () => {
+export const Login = () => {
 
   const { email, password, setEmail, setPassword, handleSubmit } = useAuthForm('login');
 

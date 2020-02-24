@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthForm } from '../../hooks/useAuthForm';
 
-const Signup = () => {
+export const Signup = () => {
 
   const { userName, email, password, setEmail, setUserName, setPassword, handleSubmit } = useAuthForm('signup');
 

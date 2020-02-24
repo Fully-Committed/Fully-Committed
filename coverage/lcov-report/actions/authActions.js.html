@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">88.89% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/9</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -81,19 +81,21 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,12 +112,12 @@
 export const SET_USER_SESSION = 'SET_USER_SESSION';
 export const SET_SESSION_ERROR = 'SET_SESSION_ERROR';
 &nbsp;
-export const authorizeUser = <span class="fstat-no" title="function not covered" >(u</span>ser, authFunction) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >di</span>spatch =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  dispatch(turnLoadingOn());</span>
-<span class="cstat-no" title="statement not covered" >  return authFunction(user)</span>
-    .then(<span class="fstat-no" title="function not covered" >us</span>er =&gt; {
-<span class="cstat-no" title="statement not covered" >      dispatch({ type: SET_USER_SESSION, payload: user });</span>
-<span class="cstat-no" title="statement not covered" >      return dispatch(turnLoadingOff());</span>
+export const authorizeUser = (user, authFunction) =&gt; dispatch =&gt; {
+  dispatch(turnLoadingOn());
+  return authFunction(user)
+    .then(user =&gt; {
+      dispatch({ type: SET_USER_SESSION, payload: user });
+      return dispatch(turnLoadingOff());
     })
     .catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; <span class="cstat-no" title="statement not covered" >dispatch({ type: SET_SESSION_ERROR, payload: error }))</span>;
 };
@@ -127,7 +129,8 @@ export const authorizeUser = <span class="fstat-no" title="function not covered"
 /*Notes for afterlunch
 &nbsp;
 - in actions, we need to make verify user, and authenticate user? 
-&nbsp;
+  - use effect that checks verify route with user from state as well as checking cookies for a user
+  - useEffect (in useVerify hook) called on every page
 */
 &nbsp;</pre></td></tr></table></pre>
 
@@ -136,7 +139,7 @@ export const authorizeUser = <span class="fstat-no" title="function not covered"
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Feb 24 2020 11:55:30 GMT-0800 (Pacific Standard Time)
+                at Mon Feb 24 2020 13:07:53 GMT-0800 (Pacific Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
