@@ -19,7 +19,7 @@ export const useAuthForm = (type) => {
         if(res.type === SET_SESSION_ERROR) {
           throw new Error('Something went wrong!!!');
         } else {
-          window.location.href = ('https://github.com/login/oauth/authorize?client_id=c715bf39a4242ffcd1b9&scope=repo');
+          window.location.href = (`https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=repo`);
         }
       });
   };
