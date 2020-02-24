@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for actions/authActions.js</title>
+    <title>Code coverage report for hooks/useAuthForm.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">actions</a> authActions.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">hooks</a> useAuthForm.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.89% </span>
+                <span class="strong">7.69% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>1/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">7.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/8</span>
+                <span class='fraction'>1/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -82,56 +82,65 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { turnLoadingOn, turnLoadingOff } from './loadingActions';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { authorizeUser, SET_SESSION_ERROR } from '../actions/authActions';
+import { getSignupUser, getLoginUser } from '../services/authServices';
 &nbsp;
-export const SET_USER_SESSION = 'SET_USER_SESSION';
-export const SET_SESSION_ERROR = 'SET_SESSION_ERROR';
+export const useAuthForm = <span class="fstat-no" title="function not covered" >(t</span>ype) =&gt; {
+  const [email, setEmail] = <span class="cstat-no" title="statement not covered" >useState('');</span>
+  const [password, setPassword] = <span class="cstat-no" title="statement not covered" >useState('');</span>
+  const [userName, setUserName] = <span class="cstat-no" title="statement not covered" >useState('');</span>
 &nbsp;
-export const authorizeUser = (user, authFunction) =&gt; dispatch =&gt; {
-  dispatch(turnLoadingOn());
-  return authFunction(user)
-    .then(user =&gt; {
-      dispatch({ type: SET_USER_SESSION, payload: user });
-      return dispatch(turnLoadingOff());
-    })
-    .catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; <span class="cstat-no" title="statement not covered" >dispatch({ type: SET_SESSION_ERROR, payload: error }))</span>;
+  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
+&nbsp;
+  const handleSubmit = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
+    const authFunction = <span class="cstat-no" title="statement not covered" >(type === 'signup') ? getSignupUser : getLoginUser; </span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return dispatch(authorizeUser({ email, userName, password }, authFunction))</span>
+      .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; {
+<span class="cstat-no" title="statement not covered" >        if(res.type === SET_SESSION_ERROR) {</span>
+<span class="cstat-no" title="statement not covered" >          throw new Error('Something went wrong!!!');</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          window.location.href = ('https://github.com/login/oauth/authorize?client_id=c715bf39a4242ffcd1b9&amp;scope=repo');</span>
+        }
+      });
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return { email, setEmail, password, setPassword, userName, setUserName, handleSubmit };</span>
 };
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-/*Notes for afterlunch
-&nbsp;
-- in actions, we need to make verify user, and authenticate user? 
-  - use effect that checks verify route with user from state as well as checking cookies for a user
-  - useEffect (in useVerify hook) called on every page
-*/
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
