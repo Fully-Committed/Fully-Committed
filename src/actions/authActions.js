@@ -25,7 +25,7 @@ export const loginUser = user =>dispatch => {
 
 /*Notes for monday
 
-- in actions, we need to make login user, verify user, and authenticate user? 
+- in actions, we need to make verify user, and authenticate user? 
 - make reducer for authUser
 - make selector for authUser
 
