@@ -10,11 +10,10 @@ describe('Auth actions', () => {
     return action(dispatch)
       .then(() => {
         expect(dispatch).toHaveBeenCalledWith({
-          type: SIGNUP_USER, 
+          type: SIGNUP_USER,
           payload: {
             email: 'jbj@jbj.com',
-            userName: 'JBJ',
-            password: 'JBJ rules'
+            userName: 'JBJ'
           }
         });
       });
@@ -29,8 +28,7 @@ describe('Auth actions', () => {
         expect(dispatch).toHaveBeenCalledWith({
           type: LOGIN_USER,
           payload: {
-            email: 'jbj@jbj.com',
-            password: 'assword'
+            email: 'jbj@jbj.com'
           }
         });
       });
