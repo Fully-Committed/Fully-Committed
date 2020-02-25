@@ -7,17 +7,21 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { AuthButtons } from './AuthButtons';
+import styles from './Auth.css';
+import { AuthLinks } from './AuthLinks';
+
 
 export const AuthPage = () => {
 
   return (
     <Router>
-      {/* <Route exact path='/auth' component={AuthButtons} /> */}
-      <Switch>
-        <Route exact path='/auth/signup' component={Signup} />
-        <Route exact path='/auth/' component={Login} />
-      </Switch>
+      <section className={styles.AuthPage}>
+        <Route path='/auth' component={AuthLinks} />
+        <Switch>
+          <Route exact path='/auth/signup' component={Signup} />
+          <Route exact path='/auth/login' component={Login} />
+        </Switch>
+      </section>
     </Router>
   );
 

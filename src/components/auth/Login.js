@@ -9,11 +9,11 @@ export const Login = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label><input type="text" value={email} onChange={({ target }) => setEmail(target.value)} />Email: </label>
-        <label><input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />Password: </label>
+        <label>Email: <input type="text" value={email} onChange={({ target }) => setEmail(target.value)} /></label>
+        <label>Password: <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} /></label>
         <button>Login</button>
       </form>
-      <Link to='/auth/signup'>I need to sign up</Link>
+
     </>
   );
 
