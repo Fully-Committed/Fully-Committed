@@ -1,6 +1,12 @@
 import React from 'react';
+import { useVerifyUser } from '../hooks/useVerifyUser';
+import { AuthPage } from './auth/AuthPage';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  useVerifyUser();
+  return (
+    <>
+      <AuthPage />
+    </>
+  );
 }
-  
