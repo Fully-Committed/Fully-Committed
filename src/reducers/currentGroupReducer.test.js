@@ -10,7 +10,9 @@ describe('current group reducer', () => {
     const initialState = { currentGroup: null };
     const newState = currentGroupReducer(initialState, action);
     expect(newState).toEqual({
-      groupName: 'group'
+      currentGroup: {
+        groupName: 'group'
+      }
     });
   });
 
@@ -22,7 +24,20 @@ describe('current group reducer', () => {
     const initialState = { currentGroup: 'group' };
     const newState = currentGroupReducer(initialState, action);
     expect(newState).toEqual({
-      groupName: 'group2'
+      currentGroup: {
+        groupName: 'group2'
+      }
+    });
+  });
+
+  it('handles default', () => {
+    const action = {
+      type: 'POOP'
+    }
+
+    const newState = currentGroupReducer(undefined, action)
+    expect(newState).toEqual({
+      currentGroup: null
     });
   });
 });
