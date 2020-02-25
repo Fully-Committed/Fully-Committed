@@ -3,7 +3,7 @@ import { SET_GROUP_SESSION, SET_GROUP_ERROR } from '../actions/groupActions';
 const initialState = {
   groups: null,
   error: null,
-}
+};
 
 export const groupReducer = (state = initialState, action) => {
   switch(action.type) {

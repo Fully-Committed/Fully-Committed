@@ -9,7 +9,6 @@ export const DataView = () => {
   useEffect(() => {
     getDevCommits(['jodinkansagor', 'joelpdurham', 'tess-jl', 'aaronedwardglenn'])
       .then(groupCommits => {
-        console.log(groupCommits);
         setGroupCommits(groupCommits);
       });
   }, []);
