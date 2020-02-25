@@ -25,8 +25,5 @@ describe('preview actions tests', () => {
     });
   });
 
-
-
-
 });
 
