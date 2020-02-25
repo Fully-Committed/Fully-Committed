@@ -1,4 +1,4 @@
-import { toGetLoading, toGetUserSession, toGetPreviewGroupName } from './useSelectors';
+import { toGetLoading, toGetUserSession, toGetPreviewGroupName, toGetPreviewDev } from './useSelectors';
 
 describe('selectors', () => {
   it('can return correct loading info from state', () => {
