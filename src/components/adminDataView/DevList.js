@@ -1,7 +1,7 @@
 import React from 'react';
-import Dev from './dev/Dev';
+import { Dev } from './Dev';
 
-const DevList = () => {
+export const DevList = () => {
 
   const array = [
     {
@@ -33,4 +33,3 @@ const DevList = () => {
   );
 };
 
-export default DevList;

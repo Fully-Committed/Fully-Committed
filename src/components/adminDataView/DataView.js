@@ -1,11 +1,9 @@
 import React from 'react';
-import DevList from './devList/DevList';
+import { DevList }  from './DevList';
 
-const GroupDetail = () => {
-  //this handle refresh will likely relate to a custom hook
+export const DataView = () => {
   const handleRefresh = () => console.log('refresh');
 
-  //destructure group name off Group to populate title?
 
   return (
     <>
@@ -15,5 +13,3 @@ const GroupDetail = () => {
     </>
   );
 };
-
-export default GroupDetail;

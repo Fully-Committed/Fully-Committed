@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Dev = ({ imageURL, timestamp, displayName, commitMessage, repoName }) => {
+export const Dev = ({ imageURL, timestamp, displayName, commitMessage, repoName }) => {
 
   return (
     <>
@@ -21,5 +21,3 @@ Dev.propTypes = {
   commitMessage: PropTypes.string.isRequired,
   repoName: PropTypes.string.isRequired
 };
-
-export default Dev;
