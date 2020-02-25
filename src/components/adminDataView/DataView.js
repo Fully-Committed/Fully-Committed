@@ -3,23 +3,32 @@ import { DevList } from './DevList';
 import { getDevCommits } from '../../services/adminDataViewServices';
 
 export const DataView = () => {
-  const [groupCommits, setGroupCommits] = useState();
-  let test = true;
-  const handleRefresh = () => getDevCommits('joelpdurham').then(groupCommits => setGroupCommits(groupCommits));
+  const [groupCommits, setGroupCommits] = useState({ 
+    message: '',
+    date: '',
+  });
 
   useEffect(() => {
-    if (test) {
-      getDevCommits(['jodinkansagor'])
-        .then(groupCommits => setGroupCommits(groupCommits));
-    }
+    getDevCommits('jodinkansagor')
+      .then(groupCommits => {
+        console.log(groupCommits);
+        setGroupCommits({
+          message: groupCommits.message,
+          date: groupCommits.date 
+        });
+      });
   }, []);
 
-  const render = groupCommits ? <h1>{groupCommits}</h1> : <h1>No commits</h1>;
+  const render = groupCommits ? (
+    <>
+      <h1>{groupCommits.message}</h1>
+      <p>{groupCommits.date}</p>
+    </>) : <h1>No commits</h1>;
 
   return (
     <>
       <h2>ACPs from groupName</h2>
-      <button onClick={handleRefresh}>refresh</button>
+      <button>refresh</button>
       {render}
       {/* <DevList /> */}
     </>
