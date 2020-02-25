@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { toGetPreviewGroupName } from '../../../selectors/useSelectors';
 
 export const GroupPreview = () => {
-
-  // const { previewName, previewDevList} = usePreview(); 
-  ///// pulled from custom hook - state and that
-
-  const previewName = 'previewGroupName1';
-
-  
+  const groupName = useSelector(toGetPreviewGroupName);
 
   const previewDevsArray = [
     {
@@ -30,17 +25,13 @@ export const GroupPreview = () => {
 
 
   return (
-
     <section>
       <h2>Group Preview</h2>
-      <h3>{previewName}</h3>
+      <h3>Group Name: {groupName}</h3>
       <ul>
         {listOfPreviewDevs}
       </ul>
     </section>
-
   );
 };
-
-GroupPreview.propTypes = {};
 

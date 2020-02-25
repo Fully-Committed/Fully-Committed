@@ -9,7 +9,7 @@ const initialState = {
   previewDev: {}
 };
 
-export default function reducer(state = initialState, action){
+export const previewReducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_PREVIEW_GROUP_NAME:
       return { ...state, previewName: action.payload };
@@ -21,6 +21,4 @@ export default function reducer(state = initialState, action){
     default: 
       return state; 
   }
-}
-
-
+};

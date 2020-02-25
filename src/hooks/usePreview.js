@@ -6,12 +6,15 @@ export const usePreview = () => {
   const [groupName, setGroupName] = useState('');
   const dispatch = useDispatch();
 
+  const handlePreviewNameChange = ({ target }) => {
+    setGroupName(target.value);
+  };
+
   const handleGroupNameSubmit = () => {
     event.preventDefault();
     dispatch(setPreviewGroupName(groupName));
   };
 
-  return { handleGroupNameSubmit, setGroupName, groupName };
 
-  
+  return { handleGroupNameSubmit, setGroupName, handlePreviewNameChange };
 };
