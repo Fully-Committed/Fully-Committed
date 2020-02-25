@@ -14,7 +14,7 @@ export const Signup = () => {
         <label><input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />Password: </label>
         <button>Signup</button>
       </form>
-      <Link to='/auth/login'>I need to login</Link>
+      <Link to='/auth'>I need to login</Link>
     </>
   );
 

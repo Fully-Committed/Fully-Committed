@@ -6,7 +6,7 @@ export const AuthButtons = () => {
 
   return (
     <section>
-      <Link to='/auth/login'>Log In</Link>
+      <Link to='/auth'>Log In</Link>
       <Link to='/auth/signup'>Sign Up</Link>
     </section>
   );

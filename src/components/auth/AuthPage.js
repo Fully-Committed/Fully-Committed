@@ -13,10 +13,10 @@ export const AuthPage = () => {
 
   return (
     <Router>
-      <Route exact path='/auth' component={AuthButtons} />
+      {/* <Route exact path='/auth' component={AuthButtons} /> */}
       <Switch>
         <Route exact path='/auth/signup' component={Signup} />
-        <Route exact path='/auth/login' component={Login} />
+        <Route exact path='/auth/' component={Login} />
       </Switch>
     </Router>
   );
