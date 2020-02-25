@@ -1,4 +1,4 @@
-import { toGetLoading, toGetUserSession } from './useSelectors';
+import { toGetLoading, toGetUserSession, toGetPreviewGroupName } from './useSelectors';
 
 describe('selectors', () => {
   it('can return correct loading info from state', () => {
@@ -26,7 +26,7 @@ describe('selectors', () => {
         previewName: 'preview group name'
       }
     };
-    expect(toGetUserSession(state)).toEqual('preview group name');
+    expect(toGetPreviewGroupName(state)).toEqual('preview group name');
   });
 
 
