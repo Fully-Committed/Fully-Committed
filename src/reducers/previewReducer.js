@@ -16,7 +16,9 @@ export default function reducer(state = initialState, action){
       return { ...state, previewName: action.payload };
     case ADD_DEV: 
       return { ...state, previewDev: action.payload };
-      
+    case REMOVE_DEV: 
+      return { ...state, previewDev: action.payload };
+
     default: 
       return state; 
   }
