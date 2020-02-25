@@ -16,11 +16,11 @@ describe('Preview Reducer', () => {
   });
 
   it('handles the SET_PREVIEW_GROUP_NAME action', () => {
-    const action = setPreviewGroupName(); 
+    const action = setPreviewGroupName({ previewName: 'preview name' }); 
     const initialState = { previewName: 'New Group' };
     const newState = reducer(initialState, action); 
     
-    expect(newState).toEqual({ previewName: 'Calvin Coolidge' });
+    expect(newState).toEqual({ previewName: 'preview name' });
   }); 
 
 
