@@ -1,35 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { DevList } from './DevList';
 import { getDevCommits } from '../../services/adminDataViewServices';
+import { Dev } from './Dev';
 
 export const DataView = () => {
-  const [groupCommits, setGroupCommits] = useState({ 
-    message: '',
-    date: '',
-  });
+  const [groupCommits, setGroupCommits] = useState();
 
   useEffect(() => {
-    getDevCommits(['jodinkansagor', 'joelpdurham'])
+    getDevCommits(['jodinkansagor', 'joelpdurham', 'tess-jl', 'aaronedwardglenn'])
       .then(groupCommits => {
         console.log(groupCommits);
-        setGroupCommits({
-          message: groupCommits.message,
-          date: groupCommits.date 
-        });
+        setGroupCommits(groupCommits);
       });
   }, []);
 
-  const render = groupCommits ? (
-    <>
-      <h1>{groupCommits.message}</h1>
-      <p>{groupCommits.date}</p>
-    </>) : <h1>No commits</h1>;
+  const render = groupCommits ? groupCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
 
   return (
     <>
       <h2>ACPs from groupName</h2>
       <button>refresh</button>
-      {render}
+      <div>
+        {render}
+      </div>
       {/* <DevList /> */}
     </>
   );
