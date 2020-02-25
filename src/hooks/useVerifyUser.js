@@ -7,6 +7,6 @@ export const useVerifyUser = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    return dispatch(authorizeUser('', getVerifyUser));
+    dispatch(authorizeUser('', getVerifyUser));
   }, []);
 };
