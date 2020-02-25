@@ -6,7 +6,7 @@ import {
 
 const initialState = { 
   previewName: 'New Group',
-  previewDev: {}
+  previewDev: null
 };
 
 export const previewReducer = (state = initialState, action) => {

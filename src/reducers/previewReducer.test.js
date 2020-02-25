@@ -1,4 +1,4 @@
-import reducer from './previewReducer';
+import { previewReducer } from './previewReducer';
 
 import {
   setPreviewGroupName, 
@@ -10,7 +10,7 @@ describe('Preview Reducer', () => {
   it('handles the action it does not understand gracefully', () => {
     const action = { type: 'COOL_ACTION_4_LYFE' }; 
     const initialState = { previewName: 'Calvin Coolidge' };
-    const newState = reducer(initialState, action); 
+    const newState = previewReducer(initialState, action); 
 
     expect(newState).toEqual({ previewName: 'Calvin Coolidge' });
   });
@@ -18,15 +18,15 @@ describe('Preview Reducer', () => {
   it('handles the SET_PREVIEW_GROUP_NAME action', () => {
     const action = setPreviewGroupName('preview name'); 
     const initialState = { previewName: 'New Group' };
-    const newState = reducer(initialState, action); 
+    const newState = previewReducer(initialState, action); 
     
     expect(newState).toEqual({ previewName: 'preview name' });
   }); 
 
   it('handles the ADD_DEV action', () => {
     const action = addDev({ _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl' }); 
-    const initialState = { previewDev: {} };
-    const newState = reducer(initialState, action); 
+    const initialState = { previewDev: null };
+    const newState = previewReducer(initialState, action); 
     
     expect(newState).toEqual({ 
       previewDev: { 
@@ -38,7 +38,7 @@ describe('Preview Reducer', () => {
   }); 
 
   it('handles the REMOVE_DEV action', () => {
-    const action = removeDev({ }); 
+    const action = removeDev(null); 
     const initialState = { 
       previewDev: { 
         _id: '1234', 
@@ -46,10 +46,10 @@ describe('Preview Reducer', () => {
         devGitHubHandle: '@tess-jl' 
       } 
     };
-    const newState = reducer(initialState, action); 
+    const newState = previewReducer(initialState, action); 
     
     expect(newState).toEqual({ 
-      previewDev: { } 
+      previewDev: null 
     });
   }); 
 

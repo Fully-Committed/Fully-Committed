@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/services/authServices.js</title>
+    <title>Code coverage report for src/hooks/usePreview.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/services</a> authServices.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/hooks</a> usePreview.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/12</span>
+                <span class='fraction'>1/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/9</span>
+                <span class='fraction'>1/9</span>
             </div>
         
             
@@ -77,61 +77,46 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const request = <span class="fstat-no" title="function not covered" >(p</span>ath, method, body) =&gt; {
-<span class="cstat-no" title="statement not covered" >  return fetch(`http://localhost:7891${path}`, {</span>
-    method,
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    credentials: 'include',
-    body: body &amp;&amp; JSON.stringify(body)
-  })
-    .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; <span class="cstat-no" title="statement not covered" >Promise.all([res.ok, res.json()]))</span>
-    .then(<span class="fstat-no" title="function not covered" >([</span>ok, json]) =&gt; {
-<span class="cstat-no" title="statement not covered" >      if(!ok) <span class="cstat-no" title="statement not covered" >throw json;</span></span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setPreviewGroupName } from '../actions/previewActions';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return json;</span>
-    });
+export const usePreview = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+  const [groupName, setGroupName] = <span class="cstat-no" title="statement not covered" >useState('');</span>
+  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
+&nbsp;
+  const handlePreviewNameChange = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> target }) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    setGroupName(target.value);</span>
+  };
+&nbsp;
+  const handleGroupNameSubmit = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(setPreviewGroupName(groupName));</span>
+  };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return { handleGroupNameSubmit, setGroupName, handlePreviewNameChange };</span>
 };
-&nbsp;
-&nbsp;
-export const getSignupUser = <span class="fstat-no" title="function not covered" >us</span>er =&gt; (
-<span class="cstat-no" title="statement not covered" >  request('/api/v1/auth/signup', 'POST', { ...user, role: 'Admin' })</span>
-);
-&nbsp;
-export const getLoginUser = <span class="fstat-no" title="function not covered" >us</span>er =&gt; <span class="cstat-no" title="statement not covered" >request('/api/v1/auth/login', 'POST', user);</span>
-&nbsp;
-export const getVerifyUser = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >request('/api/v1/auth/verify', 'GET');</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
