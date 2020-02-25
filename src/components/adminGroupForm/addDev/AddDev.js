@@ -1,26 +1,30 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const AddNewDev = () => {
+export const AddDevForm = () => {
   const [displayName, setDisplayName] = useState('');
   const [gitHubUserName, setGitHubUserName] = useState('');
 
-  const handleSubmit = () => {
+  const handleDevSubmit = () => {
     event.preventDefault();
-  }
+    //// conditionally dipatch action to check GitHub for GitHub hanlde
+    //// dispatch action to display in preview
+  };
+
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Add New Dev</h1>
-      <h2>Dev Display Name</h2>
+ 
+    <form onSubmit={handleDevSubmit}>
+      <h1>Add Dev</h1>
+      <h2>Dev Name</h2>
       <input type="text" value="displayName" onChange={({ target }) => setDisplayName(target.value)} />
-      <h2>Github User Name</h2>
+      <h2>Github Handle</h2>
       <input type="text" value="gitHubUserName" onChange={({ target }) => setGitHubUserName(target.value)} />
       <button>Add Dev</button>
     </form>
-  )
+
+  );
 };
 
-AddNewDev.propTypes = {};
+AddDevForm.propTypes = {};
 
-export default AddNewDev;
