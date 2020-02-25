@@ -9,7 +9,13 @@ describe('preview actions tests', () => {
     });
   });
 
+  it('creates an action to add a dev to list in preview', () => {
+    const action = ADD_DEV(); 
 
+    expect(action).toEqual({
+      type: ADD_DEV
+    });
+  });
 
 
 });
