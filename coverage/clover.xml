@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582587184231" clover="3.2.0">
-  <project timestamp="1582587184231" name="All files">
-    <metrics statements="68" coveredstatements="35" conditionals="18" coveredconditionals="10" methods="30" coveredmethods="9" elements="116" coveredelements="54" complexity="0" loc="68" ncloc="68" packages="8" files="14" classes="14"/>
+<coverage generated="1582595606366" clover="3.2.0">
+  <project timestamp="1582595606366" name="All files">
+    <metrics statements="96" coveredstatements="44" conditionals="18" coveredconditionals="10" methods="42" coveredmethods="9" elements="156" coveredelements="63" complexity="0" loc="96" ncloc="96" packages="9" files="21" classes="21"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
       <file name="store.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/store.js">
@@ -34,8 +34,55 @@
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/App.js">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.adminDataView">
+      <metrics statements="26" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="AdminDataView.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/AdminDataView.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="DataView.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/DataView.js">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+      <file name="Dev.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/Dev.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="DevList.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/DevList.js">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="Group.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/Group.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="GroupList.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/adminDataView/GroupList.js">
+        <metrics statements="9" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.auth">
@@ -117,12 +164,17 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="useSelectors.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/selectors/useSelectors.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="9" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="adminDataViewServices.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/services/adminDataViewServices.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
       <file name="authServices.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/services/authServices.js">
         <metrics statements="9" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
