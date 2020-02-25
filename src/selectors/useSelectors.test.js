@@ -20,5 +20,14 @@ describe('selectors', () => {
     expect(toGetUserSession(state)).toEqual(null);
   });
 
-  
+  it('cant return the correct preview name from state for preview reducer', () => {
+    const state = {
+      previewReducer: {
+        previewName: 'preview group name'
+      }
+    };
+    expect(toGetUserSession(state)).toEqual('preview group name');
+  });
+
+
 });
