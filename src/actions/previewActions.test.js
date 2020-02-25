@@ -17,6 +17,16 @@ describe('preview actions tests', () => {
     });
   });
 
+  it('creates an action to remove a dev to list in preview', () => {
+    const action = removeDev(); 
+
+    expect(action).toEqual({
+      type: REMOVE_DEV
+    });
+  });
+
+
+
 
 });
 
