@@ -9,6 +9,8 @@ export const addDev = () => ({
 });
   
 export const REMOVE_DEV = 'REMOVE_DEV';
-
+export const removeDev = () => ({
+  type: REMOVE_DEV
+});
 
 

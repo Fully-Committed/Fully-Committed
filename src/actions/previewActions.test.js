@@ -1,4 +1,4 @@
-import { SET_PREVIEW_GROUP_NAME, ADD_DEV, REMOVE_DEV, setPreviewGroupName, addDev } from './previewActions';
+import { SET_PREVIEW_GROUP_NAME, ADD_DEV, REMOVE_DEV, setPreviewGroupName, addDev, removeDev } from './previewActions';
 
 describe('preview actions tests', () => {
   it('creates an action to set group name in preview', () => {
