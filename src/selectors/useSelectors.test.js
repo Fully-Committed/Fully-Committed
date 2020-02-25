@@ -29,5 +29,22 @@ describe('selectors', () => {
     expect(toGetPreviewGroupName(state)).toEqual('preview group name');
   });
 
+  it('cant return the correct preview dev from state for preview reducer', () => {
+    const state = {
+      previewReducer: {
+        previewDev: {
+          _id: '1234',
+          devName: 'tess',
+          devGitHubHandle: '@tess-jl'
+        }
+      }
+    };
+    expect(toGetPreviewDev(state)).toEqual({
+      _id: '1234',
+      devName: 'tess',
+      devGitHubHandle: '@tess-jl'
+    });
+  });
+
 
 });
