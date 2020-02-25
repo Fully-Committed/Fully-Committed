@@ -1,17 +1,17 @@
 export const SET_PREVIEW_GROUP_NAME = 'SET_PREVIEW_GROUP_NAME';
-export const setPreviewGroupName = () => ({
+export const setPreviewGroupName = previewName => ({
   type: SET_PREVIEW_GROUP_NAME, 
-  payload: 'previewName'
+  payload: previewName
 });
 
 export const ADD_DEV = 'ADD_DEV';
-export const addDev = () => ({
+export const addDev = previewDev => ({
   type: ADD_DEV, 
-  payload: 'previewDev'
+  payload: previewDev
 });
   
 export const REMOVE_DEV = 'REMOVE_DEV';
-export const removeDev = () => ({
+export const removeDev = previewDev => ({
   type: REMOVE_DEV,
-  payload: 'previewDev'
+  payload: previewDev
 });
