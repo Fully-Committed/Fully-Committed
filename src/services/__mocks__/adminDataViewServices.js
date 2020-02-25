@@ -11,3 +11,4 @@ export const getGroups = (adminId) => {
     groupName: 'My group'
   }]);
 };
+
