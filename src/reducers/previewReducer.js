@@ -6,8 +6,7 @@ import {
 
 const initialState = { 
   previewName: 'New Group',
-  previewDev: {},
-
+  previewDev: {}
 };
 
 export default function reducer(state = initialState, action){
