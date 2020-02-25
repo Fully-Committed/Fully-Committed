@@ -37,22 +37,15 @@ describe('Preview Reducer', () => {
     });
   }); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  it('handles the REMOVE_DEV action', () => {
+    const action = removeDev({ _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl' }); 
+    const initialState = { previewDev: { _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl' } };
+    const newState = reducer(initialState, action); 
+    
+    expect(newState).toEqual({ 
+      previewDev: { } 
+    });
+  }); 
 
 
 
