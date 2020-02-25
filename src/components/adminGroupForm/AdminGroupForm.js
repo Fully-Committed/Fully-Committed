@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GroupNameForm } from './groupNameForm/GroupNameForm';
-import { AddDev } from './addDev/AddDev';
+import { AddDevForm } from './addDev/AddDev';
+import { GroupPreview } from './groupPreview/GroupPreview';
 
 const AdminGroupForm = () => {
 
@@ -13,7 +14,8 @@ const AdminGroupForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <GroupNameForm />
-      <AddDev />
+      <AddDevForm />
+      <GroupPreview />
       
       <button>Create Group</button>
     </form>
