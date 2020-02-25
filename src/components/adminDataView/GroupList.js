@@ -5,17 +5,13 @@ import { useSelector } from 'react-redux';
 import { toGetUserSession } from '../../selectors/useSelectors';
 
 export const GroupList = () => {
-  
+
   const user = useSelector(toGetUserSession);
   const [groupArray, setGroupArray] = useState([]);
 
   useEffect(() => {
-    if(user) {
+    if (user) {
       getGroups(user._id)
-        .then(res => {
-          console.log(res);
-          return res;
-        })
         .then(setGroupArray);
     }
   }, [user]);
