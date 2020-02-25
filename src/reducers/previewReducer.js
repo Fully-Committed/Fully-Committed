@@ -12,6 +12,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action){
   switch(action.type) {
+    case SET_PREVIEW_GROUP_NAME:
+      return { ...state, previewName: action.payload };
     default: 
       return state; 
   }

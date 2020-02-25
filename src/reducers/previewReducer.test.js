@@ -16,11 +16,25 @@ describe('Preview Reducer', () => {
   });
 
   it('handles the SET_PREVIEW_GROUP_NAME action', () => {
-    const action = setPreviewGroupName({ previewName: 'preview name' }); 
+    const action = setPreviewGroupName('preview name'); 
     const initialState = { previewName: 'New Group' };
     const newState = reducer(initialState, action); 
     
     expect(newState).toEqual({ previewName: 'preview name' });
+  }); 
+
+  it('handles the ADD_DEV action', () => {
+    const action = addDev({ _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl' }); 
+    const initialState = { previewDev: {} };
+    const newState = reducer(initialState, action); 
+    
+    expect(newState).toEqual({ 
+      previewDev: { 
+        _id: '1234', 
+        devName: 'tess', 
+        devGitHubHandle: '@tess-jl' 
+      } 
+    });
   }); 
 
 
