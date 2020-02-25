@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582668780364" clover="3.2.0">
-  <project timestamp="1582668780364" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="6" coveredelements="6" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
-    <file name="useSelectors.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\selectors\useSelectors.js">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+<coverage generated="1582671709429" clover="3.2.0">
+  <project timestamp="1582671709430" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="currentGroupAction.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\currentGroupAction.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
