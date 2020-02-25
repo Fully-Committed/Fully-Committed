@@ -5,7 +5,8 @@ describe('preview actions tests', () => {
     const action = setPreviewGroupName(); 
 
     expect(action).toEqual({
-      type: SET_PREVIEW_GROUP_NAME
+      type: SET_PREVIEW_GROUP_NAME, 
+      payload: 'previewName'
     });
   });
 
@@ -13,7 +14,8 @@ describe('preview actions tests', () => {
     const action = addDev(); 
 
     expect(action).toEqual({
-      type: ADD_DEV
+      type: ADD_DEV,
+      payload: 'previewDev'
     });
   });
 
@@ -21,7 +23,8 @@ describe('preview actions tests', () => {
     const action = removeDev(); 
 
     expect(action).toEqual({
-      type: REMOVE_DEV
+      type: REMOVE_DEV,
+      payload: 'previewDev'
     });
   });
 
