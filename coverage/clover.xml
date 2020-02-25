@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582659625741" clover="3.2.0">
-  <project timestamp="1582659625742" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="11" coveredelements="9" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
-    <file name="loadingActions.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-FE/src/actions/loadingActions.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+<coverage generated="1582659804524" clover="3.2.0">
+  <project timestamp="1582659804525" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="7" coveredelements="7" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="previewActions.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-FE/src/actions/previewActions.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-    </file>
-    <file name="previewActions.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-FE/src/actions/previewActions.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

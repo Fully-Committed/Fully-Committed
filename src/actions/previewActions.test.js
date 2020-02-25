@@ -1,4 +1,4 @@
-import { SET_PREVIEW_GROUP_NAME, ADD_DEV, REMOVE_DEV, setPreviewGroupName } from './previewActions';
+import { SET_PREVIEW_GROUP_NAME, ADD_DEV, REMOVE_DEV, setPreviewGroupName, addDev } from './previewActions';
 
 describe('preview actions tests', () => {
   it('creates an action to set group name in preview', () => {
@@ -10,7 +10,7 @@ describe('preview actions tests', () => {
   });
 
   it('creates an action to add a dev to list in preview', () => {
-    const action = ADD_DEV(); 
+    const action = addDev(); 
 
     expect(action).toEqual({
       type: ADD_DEV

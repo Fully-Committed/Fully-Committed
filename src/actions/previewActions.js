@@ -4,7 +4,10 @@ export const setPreviewGroupName = () => ({
 });
 
 export const ADD_DEV = 'ADD_DEV';
-
+export const addDev = () => ({
+  type: ADD_DEV
+});
+  
 export const REMOVE_DEV = 'REMOVE_DEV';
 
 
