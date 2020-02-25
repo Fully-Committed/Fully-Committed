@@ -31,7 +31,7 @@ describe('selectors', () => {
 
   it('can return the current group from state', () => {
     const state = {
-      groupReducer: {
+      currentGroupReducer: {
         currentGroup: null
       }
     };
