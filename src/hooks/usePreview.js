@@ -20,8 +20,6 @@ export const usePreview = () => {
   const handleAddDevToPreview = devClicked => {
     setGroupDev(devClicked);
     dispatch(addDev(devClicked));
-    //clear the inputs to search that particular dev
-    
   };
 
 
