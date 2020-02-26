@@ -81,7 +81,6 @@ describe('Preview Reducer', () => {
         devGitHubHandle: '@tess-jl' 
       }]
     });
-
   }); 
 
 });

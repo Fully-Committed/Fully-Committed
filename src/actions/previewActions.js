@@ -10,11 +10,11 @@ export const addDev = previewDev => ({
   payload: previewDev
 });
 
-export const creaateDev = gitHubHandle => dispatch => {
-  //dispatch(loadingstate) optional
-  //call our dervice to hit the route on the backend for posting a dev 
-  //.then(validatedDev => dispatch(addDev(validatedDev)))
-};
+// export const creaateDev = gitHubHandle => dispatch => {
+//   //dispatch(loadingstate) optional
+//   //call our dervice to hit the route on the backend for posting a dev 
+//   //.then(validatedDev => dispatch(addDev(validatedDev)))
+// };
   
 export const REMOVE_DEV = 'REMOVE_DEV';
 export const removeDev = previewDev => ({
