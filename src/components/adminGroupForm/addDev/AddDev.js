@@ -41,8 +41,24 @@ export const AddDevForm = () => {
     dispatch(setSuggestedDevsByHandle(target.value));
     setHandle(target.value);
   };
+
+  const buttonRender = () => {
+    if(nameElements.length === 0 && handleElements.length === 0 && devName && handle) {
+      return (
+        <button onClick={() => console.log('button has been clicked')
+        }>Add New Dev</button>
+      );
+    }
+    else {
+      return (
+        <button>FAKE BUTTON</button>
+      );
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={() => event.preventDefault()}>
+
 
       <h1>Add Dev</h1>
       <h2>Dev Name: </h2>
@@ -58,8 +74,8 @@ export const AddDevForm = () => {
         {handleElements}
       </ul>
       
-
-      <button>Add Dev</button>
+      <p>If a user does not exist in our library, enter a chosen username and their github handle and click the button to add them</p>
+      {buttonRender()}
     </form>
   );
 };
