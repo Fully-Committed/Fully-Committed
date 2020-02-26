@@ -7,8 +7,8 @@ import { toGetCurrentGroup } from '../../selectors/useSelectors';
 
 export const DataView = () => {
   const [groupCommits, setGroupCommits] = useState();
-
   const currentGroup = useSelector(toGetCurrentGroup);
+  const now = new Date();
 
   useEffect(() => {
     if(currentGroup) {
@@ -25,7 +25,16 @@ export const DataView = () => {
     }
   }, [currentGroup]);
 
-  const render = groupCommits ? groupCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
+  let sortedCommits;
+  if(groupCommits) {
+    sortedCommits = groupCommits.sort(dev => {
+      const newFormattedDate = new Date(dev.date);
+      return now - newFormattedDate;
+
+    });
+  }
+
+  const render = groupCommits ? sortedCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
 
   return (
     <>
