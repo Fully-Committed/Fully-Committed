@@ -23,6 +23,6 @@ export const Group = ({ groupName, groupDescription, devsInGroup }) => {
 Group.propTypes = {
   devsInGroup: PropTypes.array.isRequired,
   groupName: PropTypes.string.isRequired,
-  groupDescription: PropTypes.string.isRequired
+  groupDescription: PropTypes.string
 
 };
