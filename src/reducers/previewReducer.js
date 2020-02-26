@@ -6,14 +6,21 @@ import {
 
 const initialState = { 
   previewName: 'New Group',
-  previewDev: {},
-
+  previewDevs: []
 };
 
-export default function reducer(state = initialState, action){
+export const previewReducer = (state = initialState, action) => {
   switch(action.type) {
-        
+    case SET_PREVIEW_GROUP_NAME:
+      return { ...state, previewName: action.payload };
+    case ADD_DEV: 
+      return { ...state, previewDevs: [...state.previewDevs, action.payload] };
+    case REMOVE_DEV: 
+      return { ...state, previewDevs: state.previewDevs.filter(dev => dev._id !== action.payload._id) }; 
+
+    default: 
+      return state; 
   }
-}
+};
 
-
+//CREATE_DEV

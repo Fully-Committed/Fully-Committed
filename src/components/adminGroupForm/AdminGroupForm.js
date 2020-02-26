@@ -5,21 +5,20 @@ import { GroupPreview } from './groupPreview/GroupPreview';
 
 const AdminGroupForm = () => {
 
-  const handleSubmit = () => {
-    event.preventDefault(); 
+  const postGroup = () => {
     ///dispact action to POST a new group ////
   };
 
 <<<<<<< HEAD
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
       <GroupNameForm />
       <AddDevForm />
       <GroupPreview />
       
-      <button>Create Group</button>
-    </form>
+      <button onClick={postGroup}>Create Group</button>
+    </>
   );
 };
 

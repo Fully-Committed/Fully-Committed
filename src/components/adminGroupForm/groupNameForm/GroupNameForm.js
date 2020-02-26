@@ -1,26 +1,14 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { usePreview } from '../../../hooks/usePreview';
 
 export const GroupNameForm = () => {
-
-  const [groupName, setGroupName] = useState('');
-
-
-  const handleGroupNameSubmit = () => {
-    event.preventDefault();
-    ////// dispatch action to display name in preview
-  };
+  const { handleGroupNameSubmit, handlePreviewNameChange } = usePreview();
 
   return (
-
     <form onSubmit={handleGroupNameSubmit}>
-      <input type="text" value={groupName} placeholder = 'groupname' onChange={({ target }) => setGroupName(target.value)} />  
+      <input type="text" placeholder='groupname' onChange={handlePreviewNameChange} />  
       <button>Preview Name</button>
     </form>
-
-
   );
 };
-
-GroupNameForm.propTypes = {};
 

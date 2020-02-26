@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const request = (path, method, body) => {
   return fetch(`http://localhost:7891${path}`, {
     method,
@@ -14,6 +15,9 @@ const request = (path, method, body) => {
       return json;
     });
 };
+=======
+import { request } from './request';
+>>>>>>> 61397648ef89de7f25f4eb487e0a5adfd0d15ceb
 
 export const getSignupUser = user => (
   request('/api/v1/auth/signup', 'POST', { ...user, role: 'Admin' })
