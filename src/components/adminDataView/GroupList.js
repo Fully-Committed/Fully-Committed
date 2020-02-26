@@ -11,7 +11,6 @@ export const GroupList = () => {
 
   useEffect(() => {
     if (user) {
-     
       dispatch(setGroupArray(user._id));
     }
   }, [user]);
