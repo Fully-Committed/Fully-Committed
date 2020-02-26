@@ -12,7 +12,12 @@ export const DataView = () => {
 
   useEffect(() => {
     if(currentGroup) {
-      const groupNames = currentGroup.map(dev => dev.devGitHubHandle);
+      const groupNames = currentGroup.map(dev => (
+        {
+          name: dev.devName,
+          gitHubHandle: dev.devGitHubHandle
+        }
+      ));
       getDevCommits(groupNames)
         .then(groupCommits => {
           setGroupCommits(groupCommits);
