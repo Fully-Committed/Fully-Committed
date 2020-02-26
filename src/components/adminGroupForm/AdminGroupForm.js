@@ -9,7 +9,6 @@ const AdminGroupForm = () => {
     ///dispact action to POST a new group ////
   };
 
-<<<<<<< HEAD
 
   return (
     <>
@@ -23,6 +22,4 @@ const AdminGroupForm = () => {
 };
 
 
-=======
->>>>>>> a6279ae782415155f58561133d72beb4c11133a7
 export default AdminGroupForm;

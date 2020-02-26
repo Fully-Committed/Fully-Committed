@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setPreviewGroupName, addDev } from '../actions/previewActions';
+import { setPreviewGroupName, addDev, removeDev } from '../actions/previewActions';
 
 export const usePreview = () => {
   const [groupName, setGroupName] = useState('');
   const [groupDev, setGroupDev] = useState();
+  const [previewDev, setPreviewDev] = useState(); 
+
 
   const dispatch = useDispatch();
 
@@ -22,6 +24,11 @@ export const usePreview = () => {
     dispatch(addDev(devClicked));
   };
 
+  const handleRemoveDevFromPreview = previewDevClicked => {
+    setPreviewDev(previewDevClicked);
+    dispatch(removeDev(previewDevClicked));
+  };
 
-  return { handleGroupNameSubmit, setGroupName, handlePreviewNameChange, handleAddDevToPreview };
+
+  return { handleGroupNameSubmit, setGroupName, handlePreviewNameChange, handleAddDevToPreview, handleRemoveDevFromPreview };
 };

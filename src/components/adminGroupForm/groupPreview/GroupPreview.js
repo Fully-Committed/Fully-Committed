@@ -1,17 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { toGetPreviewGroupName, toGetPreviewDevs } from '../../../selectors/useSelectors';
+import { usePreview } from '../../../hooks/usePreview';
 
 export const GroupPreview = () => {
   const groupName = useSelector(toGetPreviewGroupName);
   const previewDevsArray = useSelector(toGetPreviewDevs);
-
-  console.log(previewDevsArray, 'this is prev devs arr');
+  const { handleRemoveDevFromPreview } = usePreview(); 
 
   const listOfPreviewDevs = previewDevsArray.map(devPreview => (
     <li key={devPreview._id}>
       <p>{devPreview.devName}</p>
       <p>{devPreview.devGitHubHandle}</p>
+      <button onClick={()=> handleRemoveDevFromPreview(devPreview)}>X</button>
     </li>
   ));
 

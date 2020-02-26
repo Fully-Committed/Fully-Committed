@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useAddDev } from '../../../hooks/useAddDev';
 import { usePreview } from '../../../hooks/usePreview';
 import { toGetSuggestedDevs } from '../../../selectors/useSelectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSuggestedDevsByName } from '../../../actions/previewActions';
+import { setSuggestedDevsByName, setSuggestedDevsByHandle } from '../../../actions/previewActions';
 
 
 export const AddDevForm = () => {
@@ -38,6 +37,10 @@ export const AddDevForm = () => {
     setDevName(target.value);
   };
 
+  const handleHandleChange = ({ target }) => {
+    dispatch(setSuggestedDevsByHandle(target.value));
+    setHandle(target.value);
+  };
   return (
     <form>
 
@@ -48,12 +51,12 @@ export const AddDevForm = () => {
         {nameElements}
       </ul>
       
-{/* 
+
       <h2>Github Handle</h2>
-      <input type="search" value={devGitHubHandle} onChange={handleGitHubHandleInputChange} />
+      <input type="search" value={handle} onChange={handleHandleChange} />
       <ul>
         {handleElements}
-      </ul> */}
+      </ul>
       
 
       <button>Add Dev</button>
