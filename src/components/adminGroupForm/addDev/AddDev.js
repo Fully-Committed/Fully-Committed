@@ -2,19 +2,25 @@ import React from 'react';
 import { useAddDev } from '../../../hooks/useAddDev';
 
 export const AddDevForm = () => {
-  const { handleNameInputChange, handleAddDevSubmit, devGitHubUserName, devName, suggestedNamesList } = useAddDev();
+  const { handleNameInputChange, handleGitHubHandleInputChange, handleAddDevSubmit, devGitHubHandle, devName, suggestedNamesList, suggestedHandlesList } = useAddDev();
 
   let names;
   if(suggestedNamesList.length > 0) {
-    names = suggestedNamesList.map((name, i) => (
+    names = suggestedNamesList.map((dev, i) => (
       <li key={i}>
-        {name}
+        {dev.devName}
       </li>
     ));
   }
 
-  console.log(suggestedNamesList, 'list');
-
+  let handles;
+  if(suggestedHandlesList.length > 0) {
+    handles = suggestedHandlesList.map((dev, i) => (
+      <li key={i}>
+        {dev.devGitHubHandle}
+      </li>
+    ));
+  }
 
 
   return (
@@ -31,7 +37,14 @@ export const AddDevForm = () => {
       }
 
       <h2>Github Handle</h2>
-      <input type="search" value={devGitHubUserName} onChange={handleNameInputChange} />
+      <input type="search" value={devGitHubHandle} onChange={handleGitHubHandleInputChange} />
+      {
+        handles && 
+      <ul>
+        {handles}
+      </ul>
+      }
+
       <button>Add Dev</button>
     </form>
   );
