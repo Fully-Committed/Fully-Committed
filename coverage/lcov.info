@@ -1,5 +1,5 @@
 TN:
-SF:src\store.js
+SF:src/store.js
 FNF:0
 FNH:0
 DA:5,1
@@ -11,7 +11,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\actions\authActions.js
+SF:src/actions/authActions.js
 FN:6,(anonymous_0)
 FN:6,(anonymous_1)
 FN:9,(anonymous_2)
@@ -36,7 +36,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\actions\currentGroupAction.js
+SF:src/actions/currentGroupAction.js
 FN:4,(anonymous_0)
 FN:9,(anonymous_1)
 FNF:2
@@ -53,7 +53,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\actions\groupActions.js
+SF:src/actions/groupActions.js
 FN:8,(anonymous_0)
 FN:8,(anonymous_1)
 FN:11,(anonymous_2)
@@ -78,7 +78,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\actions\loadingActions.js
+SF:src/actions/loadingActions.js
 FN:4,(anonymous_0)
 FN:5,(anonymous_1)
 FNF:2
@@ -95,7 +95,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\App.js
+SF:src/components/App.js
 FN:11,App
 FNF:1
 FNH:0
@@ -107,7 +107,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\AdminDataView.js
+SF:src/components/adminDataView/AdminDataView.js
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
@@ -120,7 +120,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\DataView.js
+SF:src/components/adminDataView/DataView.js
 FN:6,(anonymous_0)
 FN:11,(anonymous_1)
 FN:16,(anonymous_2)
@@ -146,7 +146,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\Dev.js
+SF:src/components/adminDataView/Dev.js
 FN:4,(anonymous_0)
 FNF:1
 FNH:0
@@ -161,7 +161,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\DevList.js
+SF:src/components/adminDataView/DevList.js
 FN:4,(anonymous_0)
 FN:23,(anonymous_1)
 FNF:2
@@ -179,7 +179,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\Group.js
+SF:src/components/adminDataView/Group.js
 FN:7,(anonymous_0)
 FN:11,(anonymous_1)
 FNF:2
@@ -198,7 +198,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\adminDataView\GroupList.js
+SF:src/components/adminDataView/GroupList.js
 FN:7,(anonymous_0)
 FN:12,(anonymous_1)
 FN:19,(anonymous_2)
@@ -227,7 +227,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:src\components\auth\AuthLinks.js
+SF:src/components/auth/AuthLinks.js
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
@@ -240,7 +240,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\auth\AuthPage.js
+SF:src/components/auth/AuthPage.js
 FN:14,(anonymous_0)
 FNF:1
 FNH:0
@@ -253,7 +253,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\auth\Login.js
+SF:src/components/auth/Login.js
 FN:4,(anonymous_0)
 FN:11,(anonymous_1)
 FN:12,(anonymous_2)
@@ -273,7 +273,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\auth\PrivateRoute.js
+SF:src/components/auth/PrivateRoute.js
 FN:8,(anonymous_0)
 FNF:1
 FNH:0
@@ -302,7 +302,7 @@ BRF:8
 BRH:0
 end_of_record
 TN:
-SF:src\components\auth\Signup.js
+SF:src/components/auth/Signup.js
 FN:4,(anonymous_0)
 FN:11,(anonymous_1)
 FN:12,(anonymous_2)
@@ -325,7 +325,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\components\header\Header.js
+SF:src/components/header/Header.js
 FN:3,(anonymous_0)
 FNF:1
 FNH:0
@@ -338,7 +338,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\hooks\useAuthForm.js
+SF:src/hooks/useAuthForm.js
 FN:6,(anonymous_0)
 FN:13,(anonymous_1)
 FN:18,(anonymous_2)
@@ -370,7 +370,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:src\hooks\useGetCommits.js
+SF:src/hooks/useGetCommits.js
 FN:6,(anonymous_0)
 FN:10,(anonymous_1)
 FN:14,(anonymous_2)
@@ -408,7 +408,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:src\hooks\useVerifyUser.js
+SF:src/hooks/useVerifyUser.js
 FN:6,(anonymous_0)
 FN:9,(anonymous_1)
 FNF:2
@@ -425,7 +425,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\reducers\authReducer.js
+SF:src/reducers/authReducer.js
 FN:5,(anonymous_0)
 FNF:1
 FNH:1
@@ -446,7 +446,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\reducers\currentGroupReducer.js
+SF:src/reducers/currentGroupReducer.js
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
@@ -465,7 +465,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\reducers\groupReducer.js
+SF:src/reducers/groupReducer.js
 FN:8,(anonymous_0)
 FNF:1
 FNH:1
@@ -486,7 +486,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\reducers\index.js
+SF:src/reducers/index.js
 FNF:0
 FNH:0
 LF:0
@@ -495,7 +495,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\reducers\loadingReducer.js
+SF:src/reducers/loadingReducer.js
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
@@ -516,7 +516,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src\selectors\useSelectors.js
+SF:src/selectors/useSelectors.js
 FN:1,(anonymous_0)
 FN:2,(anonymous_1)
 FN:3,(anonymous_2)
@@ -540,7 +540,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\services\adminDataViewServices.js
+SF:src/services/adminDataViewServices.js
 FN:2,(anonymous_0)
 FN:6,(anonymous_1)
 FN:11,(anonymous_2)
@@ -588,7 +588,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\services\authServices.js
+SF:src/services/authServices.js
 FN:1,(anonymous_0)
 FN:10,(anonymous_1)
 FN:11,(anonymous_2)
