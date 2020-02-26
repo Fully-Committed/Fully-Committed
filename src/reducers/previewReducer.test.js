@@ -2,8 +2,8 @@ import { previewReducer } from './previewReducer';
 
 import {
   setPreviewGroupName, 
-  addDev,
-  removeDev
+  ADD_DEV,
+  REMOVE_DEV
 } from '../actions/previewActions';
 
 describe('Preview Reducer', () => {
@@ -24,33 +24,64 @@ describe('Preview Reducer', () => {
   }); 
 
   it('handles the ADD_DEV action', () => {
-    const action = addDev({ _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl' }); 
-    const initialState = { previewDev: null };
-    const newState = previewReducer(initialState, action); 
-    
-    expect(newState).toEqual({ 
-      previewDev: { 
-        _id: '1234', 
-        devName: 'tess', 
-        devGitHubHandle: '@tess-jl' 
-      } 
-    });
-  }); 
+    const action = {
+      type: ADD_DEV,
+      payload: { 
+        _id: '1235', 
+        devName: 'aaron', 
+        devGitHubHandle: '@aaronedwardglenn' 
+      }
+    }; 
 
-  it('handles the REMOVE_DEV action', () => {
-    const action = removeDev(null); 
     const initialState = { 
-      previewDev: { 
+      previewDevs: [{ 
         _id: '1234', 
         devName: 'tess', 
-        devGitHubHandle: '@tess-jl' 
-      } 
+        devGitHubHandle: '@tess-jl'  
+      }] 
     };
     const newState = previewReducer(initialState, action); 
     
     expect(newState).toEqual({ 
-      previewDev: null 
+      previewDevs: [
+        { _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl'  },
+        { _id: '1235', devName: 'aaron', devGitHubHandle: '@aaronedwardglenn'  },
+      ] 
     });
+  }); 
+
+  it('handles the REMOVE_DEV action', () => {
+    const action = {
+      type: REMOVE_DEV,
+      payload: { 
+        _id: '1235', 
+        devName: 'aaron', 
+        devGitHubHandle: '@aaronedwardglenn' 
+      }
+    }; 
+
+    const initialState = { 
+      previewDevs: [{ 
+        _id: '1234', 
+        devName: 'tess', 
+        devGitHubHandle: '@tess-jl' 
+      },
+      { 
+        _id: '1235', 
+        devName: 'aaron', 
+        devGitHubHandle: '@aaronedwardglenn' 
+      }] 
+    };
+    const newState = previewReducer(initialState, action); 
+    
+    expect(newState).toEqual({ 
+      previewDevs: [{ 
+        _id: '1234', 
+        devName: 'tess', 
+        devGitHubHandle: '@tess-jl' 
+      }]
+    });
+
   }); 
 
 });

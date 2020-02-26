@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 export const AddDevForm = () => {
   const [displayName, setDisplayName] = useState('');
@@ -13,18 +12,14 @@ export const AddDevForm = () => {
 
 
   return (
- 
     <form onSubmit={handleDevSubmit}>
       <h1>Add Dev</h1>
       <h2>Dev Name</h2>
-      <input type="text" value="displayName" onChange={({ target }) => setDisplayName(target.value)} />
+      <input type="text" onChange={({ target }) => setDisplayName(target.value)} />
       <h2>Github Handle</h2>
-      <input type="text" value="gitHubUserName" onChange={({ target }) => setGitHubUserName(target.value)} />
+      <input type="text" onChange={({ target }) => setGitHubUserName(target.value)} />
       <button>Add Dev</button>
     </form>
-
   );
 };
-
-AddDevForm.propTypes = {};
 

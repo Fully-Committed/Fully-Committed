@@ -6,7 +6,7 @@ import {
 
 const initialState = { 
   previewName: 'New Group',
-  previewDev: null
+  previewDevs: []
 };
 
 export const previewReducer = (state = initialState, action) => {
@@ -14,11 +14,13 @@ export const previewReducer = (state = initialState, action) => {
     case SET_PREVIEW_GROUP_NAME:
       return { ...state, previewName: action.payload };
     case ADD_DEV: 
-      return { ...state, previewDev: action.payload };
+      return { ...state, previewDevs: [...state.previewDevs, action.payload] };
     case REMOVE_DEV: 
-      return { ...state, previewDev: action.payload };
+      return { ...state, previewDevs: state.previewDevs.filter(dev => dev._id !== action.payload._id) }; 
 
     default: 
       return state; 
   }
 };
+
+//CREATE_DEV

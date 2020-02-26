@@ -6,7 +6,7 @@ export const GroupNameForm = () => {
 
   return (
     <form onSubmit={handleGroupNameSubmit}>
-      <input type="text" placeholder = 'groupname' onChange={handlePreviewNameChange} />  
+      <input type="text" placeholder='groupname' onChange={handlePreviewNameChange} />  
       <button>Preview Name</button>
     </form>
   );
