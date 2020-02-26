@@ -11,8 +11,13 @@ export const useAddDev = () => {
   
   const dispatch = useDispatch();
 
-  const handleNameInputChange = ({ target }) => {
-    setDevName(target.value);
+  const handleNameInputChange = ({ target } = false) => {
+    if(target) {
+      setDevName(target.value);
+    }
+    else if(!target) {
+      setDevName('');
+    }
   };
   const handleNameSearch = () => {
     return fetchDevsByName(devName)

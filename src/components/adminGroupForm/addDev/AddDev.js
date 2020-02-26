@@ -10,7 +10,10 @@ export const AddDevForm = () => {
   let names;
   if(suggestedNamesList.length > 0) {
     names = suggestedNamesList.map((dev, i) => (
-      <li onClick={() => handleAddDevToPreview(dev)} key={i}>
+      <li onClick={() => {
+        handleAddDevToPreview(dev);
+        handleNameInputChange(); 
+      }} key={i}>
         {dev.devName}
       </li>
     ));
@@ -33,7 +36,7 @@ export const AddDevForm = () => {
       <h2>Dev Name: </h2>
       <input type="search" value={devName} onChange={handleNameInputChange} />
       {
-        names && 
+        names && devName &&
       <ul>
         {names}
       </ul>
@@ -42,7 +45,7 @@ export const AddDevForm = () => {
       <h2>Github Handle</h2>
       <input type="search" value={devGitHubHandle} onChange={handleGitHubHandleInputChange} />
       {
-        handles && 
+        handles && devName &&
       <ul>
         {handles}
       </ul>
