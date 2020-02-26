@@ -1,14 +1,16 @@
 .AuthPage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   height: 120px;
+  align-items: center;
 
 .authLinks {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: space-between;
   justify-content: space-evenly;
+  border: 1px solid slategray;
 
   a {
     text-align: center;
@@ -31,7 +33,8 @@ form {
   flex-direction: column;
   align-items: flex-end;
   height: 120px;
-  margin-left: 5px;
+  border: 1px solid slategray;
+  width: 298px;
   
   button {
     justify-self: flex-end;
