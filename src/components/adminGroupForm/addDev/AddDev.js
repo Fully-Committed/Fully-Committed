@@ -10,7 +10,6 @@ export const AddDevForm = () => {
   const [devName, setDevName] = useState('');
   const [handle, setHandle] = useState('');
   const dispatch = useDispatch();
-  // const { handleNameInputChange, handleGitHubHandleInputChange, handleAddDevSubmit, devGitHubHandle, devName, suggestedNamesList, suggestedHandlesList } = useAddDev();
 
   const { handleAddDevToPreview } = usePreview();
 
