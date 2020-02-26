@@ -1,36 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { DevList } from './DevList';
-import { getDevCommits } from '../../services/adminDataViewServices';
 import { Dev } from './Dev';
-import { useSelector } from 'react-redux';
-import { toGetCurrentGroup } from '../../selectors/useSelectors';
+import { useGetCommits } from '../../hooks/useGetCommits';
 
 export const DataView = () => {
-  const [groupCommits, setGroupCommits] = useState();
-  const currentGroup = useSelector(toGetCurrentGroup);
-  const now = new Date();
-
-  useEffect(() => {
-    if(currentGroup) {
-      const groupNames = currentGroup.map(dev => (
-        {
-          name: dev.devName,
-          gitHubHandle: dev.devGitHubHandle
-        }
-      ));
-      getDevCommits(groupNames)
-        .then(groupCommits => {
-          setGroupCommits(groupCommits);
-        });
-    }
-  }, [currentGroup]);
+  const { handleGetCommits, groupCommits, dateInMS } = useGetCommits();
 
   let sortedCommits;
   if(groupCommits) {
-    sortedCommits = groupCommits.sort(dev => {
-      const newFormattedDate = new Date(dev.date);
-      return now - newFormattedDate;
-
+    sortedCommits = groupCommits.sort((dev1, dev2) => {
+      return dateInMS(dev1.date) - dateInMS(dev2.date);
     });
   }
 
@@ -39,7 +18,7 @@ export const DataView = () => {
   return (
     <>
       <h2>ACPs from groupName</h2>
-      <button>refresh</button>
+      <button onClick={handleGetCommits}>refresh</button>
       <div>
         {render}
       </div>
