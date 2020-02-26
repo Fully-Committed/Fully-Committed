@@ -1,20 +1,24 @@
 import { 
   SET_PREVIEW_GROUP_NAME,
   ADD_DEV,
-  REMOVE_DEV
+  REMOVE_DEV,
+  SET_SUGGESTED_DEVS
 } from '../actions/previewActions';
 
 const initialState = { 
   previewName: 'New Group',
-  previewDevs: []
+  previewDevs: [], 
+  suggestedDevs: []
 };
 
 export const previewReducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_PREVIEW_GROUP_NAME:
       return { ...state, previewName: action.payload };
+    case SET_SUGGESTED_DEVS:
+      return { ...state, suggestedDevs: action.payload };
     case ADD_DEV: 
-      return { ...state, previewDevs: [...state.previewDevs, action.payload] };
+      return { ...state, previewDevs: [...state.previewDevs, action.payload], suggestedDevs: [] };
     case REMOVE_DEV: 
       return { ...state, previewDevs: state.previewDevs.filter(dev => dev._id !== action.payload._id) }; 
 

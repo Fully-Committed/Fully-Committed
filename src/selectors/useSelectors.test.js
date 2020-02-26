@@ -1,4 +1,4 @@
-import { toGetLoading, toGetUserSession, toGetPreviewGroupName, toGetPreviewDev } from './useSelectors';
+import { toGetLoading, toGetUserSession, toGetPreviewGroupName, toGetPreviewDevs } from './useSelectors';
 
 describe('selectors', () => {
   it('can return correct loading info from state', () => {
@@ -32,14 +32,14 @@ describe('selectors', () => {
   it('cant return the correct preview dev from state for preview reducer', () => {
     const state = {
       previewReducer: {
-        previewDev: {
+        previewDevs: {
           _id: '1234',
           devName: 'tess',
           devGitHubHandle: '@tess-jl'
         }
       }
     };
-    expect(toGetPreviewDev(state)).toEqual({
+    expect(toGetPreviewDevs(state)).toEqual({
       _id: '1234',
       devName: 'tess',
       devGitHubHandle: '@tess-jl'

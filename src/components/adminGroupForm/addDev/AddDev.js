@@ -1,37 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAddDev } from '../../../hooks/useAddDev';
+import { usePreview } from '../../../hooks/usePreview';
+import { toGetSuggestedDevs } from '../../../selectors/useSelectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { setSuggestedDevsByName } from '../../../actions/previewActions';
+
 
 export const AddDevForm = () => {
-  const { handleNameInputChange, handleAddDevSubmit, devGitHubUserName, devName, suggestedNamesList } = useAddDev();
+  const [devName, setDevName] = useState('');
+  const [handle, setHandle] = useState('');
+  const dispatch = useDispatch();
 
-  let names ;
-  if(suggestedNamesList.length > 0) {
-    names = suggestedNamesList.map((name, i) => (
-      <li key={i}>
-        {name}
-      </li>
-    ));
-  }
+  const { handleAddDevToPreview } = usePreview();
 
-  console.log(suggestedNamesList, 'list');
+  const devs = useSelector(toGetSuggestedDevs);
 
+  const nameElements = devs.map((dev, i) => (
+    <li onClick={() => {
+      handleAddDevToPreview(dev);
+      setDevName(''); 
+    }} key={i}>
+      {dev.devName}
+    </li>
+  ));
+ 
+  const handleElements = devs.map((dev, i) => (
+    <li onClick={() => {
+      handleAddDevToPreview(dev);
+      setHandle('');
+    }} key={i}>
+      {dev.devGitHubHandle}
+    </li>
+  ));
 
+  const handleNameChange = ({ target }) => {
+    dispatch(setSuggestedDevsByName(target.value));
+    setDevName(target.value);
+  };
 
   return (
-    <form onSubmit={handleAddDevSubmit}>
+    <form>
 
       <h1>Add Dev</h1>
       <h2>Dev Name: </h2>
-      <input type="search" value={devName} onChange={handleNameInputChange} />
-      {
-        names && 
+      <input type="search" value={devName} onChange={handleNameChange} />
       <ul>
-        {names}
+        {nameElements}
       </ul>
-      }
-
+      
+{/* 
       <h2>Github Handle</h2>
-      <input type="search" value={devGitHubUserName} onChange={handleNameInputChange} />
+      <input type="search" value={devGitHubHandle} onChange={handleGitHubHandleInputChange} />
+      <ul>
+        {handleElements}
+      </ul> */}
+      
+
       <button>Add Dev</button>
     </form>
   );

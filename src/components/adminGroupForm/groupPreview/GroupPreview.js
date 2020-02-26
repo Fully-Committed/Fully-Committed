@@ -1,28 +1,19 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { toGetPreviewGroupName } from '../../../selectors/useSelectors';
+import { toGetPreviewGroupName, toGetPreviewDevs } from '../../../selectors/useSelectors';
 
 export const GroupPreview = () => {
   const groupName = useSelector(toGetPreviewGroupName);
+  const previewDevsArray = useSelector(toGetPreviewDevs);
 
-  const previewDevsArray = [
-    {
-      devName: 'Aaron Glenn', 
-      devGitHubHandle: '@aaronedwardglenn'
-    }, 
-    {
-      devName: 'Tess Lameyer', 
-      devGitHubHandle: '@tess-jl'
-    }
-  ];
+  console.log(previewDevsArray, 'this is prev devs arr');
 
   const listOfPreviewDevs = previewDevsArray.map(devPreview => (
-    <li key={devPreview.devGitHubHandle}>
+    <li key={devPreview._id}>
       <p>{devPreview.devName}</p>
       <p>{devPreview.devGitHubHandle}</p>
     </li>
   ));
-
 
   return (
     <section>
