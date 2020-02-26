@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/adminDataView/GroupList.js</title>
+    <title>Code coverage report for src/hooks/useGetCommits.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/adminDataView</a> GroupList.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/hooks</a> useGetCommits.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10% </span>
+                <span class="strong">6.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/10</span>
+                <span class='fraction'>1/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10% </span>
+                <span class="strong">6.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/10</span>
+                <span class='fraction'>1/15</span>
             </div>
         
             
@@ -90,8 +90,9 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -99,62 +100,67 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect } from 'react';
-import { Group } from './Group';
-import { useSelector, useDispatch } from 'react-redux';
-import { toGetUserSession, toGetGroupArray } from '../../selectors/useSelectors';
-import { setGroupArray } from '../../actions/groupActions';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useSelector } from 'react-redux';
+import { toGetCurrentGroup } from '../selectors/useSelectors';
+import { useEffect, useState } from 'react';
+import { getDevCommits } from '../services/adminDataViewServices';
 &nbsp;
-export const GroupList = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
-  const user = <span class="cstat-no" title="statement not covered" >useSelector(toGetUserSession);</span>
-  const groupArray = <span class="cstat-no" title="statement not covered" >useSelector(toGetGroupArray);</span>
+export const useGetCommits = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+  const [groupCommits, setGroupCommits] = <span class="cstat-no" title="statement not covered" >useState();</span>
+  const currentGroup = <span class="cstat-no" title="statement not covered" >useSelector(toGetCurrentGroup);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if(user) {</span>
-<span class="cstat-no" title="statement not covered" >      dispatch(setGroupArray(user._id));</span>
+<span class="cstat-no" title="statement not covered" >    handleGetCommits();</span>
+  }, [currentGroup]);
+&nbsp;
+  const dateInMS = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ate) =&gt; {</span>
+    const formattedDate = <span class="cstat-no" title="statement not covered" >new Date(date);</span>
+<span class="cstat-no" title="statement not covered" >    return formattedDate.getTime();</span>
+  };
+&nbsp;
+  const handleGetCommits = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (currentGroup) {</span>
+      const groupNames = <span class="cstat-no" title="statement not covered" >currentGroup.map(<span class="fstat-no" title="function not covered" >de</span>v =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+          name: dev.devName,
+          gitHubHandle: dev.devGitHubHandle
+        }
+      ));
+<span class="cstat-no" title="statement not covered" >      getDevCommits(groupNames)</span>
+        .then(<span class="fstat-no" title="function not covered" >gr</span>oupCommits =&gt; {
+<span class="cstat-no" title="statement not covered" >          setGroupCommits(groupCommits);</span>
+        });
     }
-  }, []);
+  };
 &nbsp;
-&nbsp;
-  const listOfGroupElements = <span class="cstat-no" title="statement not covered" >groupArray ? groupArray.map(<span class="fstat-no" title="function not covered" >gr</span>oup =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;li key={group._id}&gt;</span>
-      &lt;Group {...group} /&gt;
-    &lt;/li&gt;
-  )) : &lt;h1&gt;Loading...&lt;/h1&gt;;
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;&gt;
-      &lt;ul&gt;
-        {listOfGroupElements}
-      &lt;/ul&gt;
-    &lt;/&gt;
-  );
-&nbsp;
+<span class="cstat-no" title="statement not covered" >  return { handleGetCommits, groupCommits, dateInMS };</span>
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -166,14 +172,14 @@ export const GroupList = <span class="fstat-no" title="function not covered" >()
                 at Wed Feb 26 2020 12:58:41 GMT-0800 (Pacific Standard Time)
             </div>
         </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     
