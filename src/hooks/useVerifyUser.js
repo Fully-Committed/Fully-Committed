@@ -10,3 +10,4 @@ export const useVerifyUser = () => {
     dispatch(authorizeUser('', getVerifyUser));
   }, []);
 };
+

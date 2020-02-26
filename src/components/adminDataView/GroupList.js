@@ -10,10 +10,10 @@ export const GroupList = () => {
   const groupArray = useSelector(toGetGroupArray);
 
   useEffect(() => {
-    if (user) {
+    if(user) {
       dispatch(setGroupArray(user._id));
     }
-  }, [user]);
+  }, []);
 
 
   const listOfGroupElements = groupArray ? groupArray.map(group => (

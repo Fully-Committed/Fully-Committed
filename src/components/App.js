@@ -5,15 +5,16 @@ import { BrowserRouter as Router,
 } from 'react-router-dom';
 import { AdminDataView } from './adminDataView/AdminDataView';
 import { AuthPage } from './auth/AuthPage';
-import { useVerifyUser } from '../hooks/useVerifyUser';
+import { PrivateRoute } from './auth/PrivateRoute';
+import Header from '../components/header/Header';
 
 export default function App() {
-  useVerifyUser();
   return (
     <Router>
+      <Header />
       <Switch>
-        <Route exact path='/signuplogin' component={AuthPage} />
-        <Route exact path='/adv' component={AdminDataView} />
+        <Route exact path='/auth' component={AuthPage} />
+        <PrivateRoute exact path='/' component={AdminDataView} />
       </Switch>
     </Router>
   );
