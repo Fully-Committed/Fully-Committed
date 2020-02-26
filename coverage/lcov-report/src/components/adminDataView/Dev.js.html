@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/auth/Login.js</title>
+    <title>Code coverage report for src/components/adminDataView/Dev.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/auth</a> Login.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/adminDataView</a> Dev.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,18 +75,28 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,23 +104,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { useAuthForm } from '../../hooks/useAuthForm';
+import PropTypes from 'prop-types';
 &nbsp;
-export const Login = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-&nbsp;
-  const { email, password, setEmail, setPassword, handleSubmit } = <span class="cstat-no" title="statement not covered" >useAuthForm('login');</span>
+export const Dev = <span class="fstat-no" title="function not covered" >({</span> imageURL, timestamp, displayName, commitMessage, repoName }) =&gt; {
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;&lt;input type="text" value={email} onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >setEmail(target.value)}</span> /&gt;Email: &lt;/label&gt;
-      &lt;label&gt;&lt;input type="password" value={password} onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >setPassword(target.value)}</span> /&gt;Password: &lt;/label&gt;
-      &lt;button&gt;Login&lt;/button&gt;
-    &lt;/form&gt;
+    &lt;&gt;
+      &lt;img src={imageURL} /&gt;
+      &lt;h4&gt;{displayName}&lt;/h4&gt;
+      &lt;p&gt;{repoName}&lt;/p&gt;
+      &lt;p&gt;{commitMessage}&lt;/p&gt;
+      &lt;p&gt;{timestamp}&lt;/p&gt;
+    &lt;/&gt;
   );
-&nbsp;
 };
 &nbsp;
-export default Login;
+Dev.propTypes = {
+  imageURL: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  displayName: PropTypes.string.isRequired,
+  commitMessage: PropTypes.string.isRequired,
+  repoName: PropTypes.string.isRequired
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

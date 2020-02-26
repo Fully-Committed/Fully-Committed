@@ -15,7 +15,6 @@ const request = (path, method, body) => {
     });
 };
 
-
 export const getSignupUser = user => (
   request('/api/v1/auth/signup', 'POST', { ...user, role: 'Admin' })
 );
