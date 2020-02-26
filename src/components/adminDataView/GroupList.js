@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Group } from './Group';
-import { getGroups } from '../../services/adminDataViewServices';
-import { useSelector } from 'react-redux';
-import { toGetUserSession } from '../../selectors/useSelectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { toGetUserSession, toGetGroupArray } from '../../selectors/useSelectors';
+import { setGroupArray } from '../../actions/groupActions';
 
 export const GroupList = () => {
-
+  const dispatch = useDispatch();
   const user = useSelector(toGetUserSession);
-  const [groupArray, setGroupArray] = useState([]);
+  const groupArray = useSelector(toGetGroupArray);
 
   useEffect(() => {
     if (user) {
-      getGroups(user._id)
-        .then(setGroupArray);
+      dispatch(setGroupArray(user._id));
     }
   }, [user]);
 
 
-  const listOfGroupElements = groupArray.map(group => (
+  const listOfGroupElements = groupArray ? groupArray.map(group => (
     <li key={group._id}>
       <Group {...group} />
     </li>
-  ));
+  )) : <h1>Loading...</h1>;
 
   return (
     <>
