@@ -1,7 +1,7 @@
 import { LOADING_ON, LOADING_OFF } from '../actions/loadingActions';
 
 const initialState = {
-  loading: false
+  loading: true
 };
 
 export const loadingReducer = (state = initialState, action) => {

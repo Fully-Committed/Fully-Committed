@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { toGetLoading, toGetUserSession } from '../../selectors/useSelectors';
+import { toGetUserSession, toGetUserError } from '../../selectors/useSelectors';
 import { useSelector } from 'react-redux';
-import { useLocation, useHistory, Route } from 'react-router-dom';
+import { useHistory, Route } from 'react-router-dom';
+import { useVerifyUser } from '../../hooks/useVerifyUser';
 
-export const PrivateRoute = ({ component, path}) => {
-  const loading = useSelector(toGetLoading);
+export const PrivateRoute = ({ component, path }) => {
   const user = useSelector(toGetUserSession);
-  // const location = useLocation();
+  const error = useSelector(toGetUserError);
   const history = useHistory();
 
-  if(loading) return null;
-  if(!user) {
-    history.replace('/auth')
+  useVerifyUser();
+  if (!user && error) {
+    history.replace('/auth');
   }
+  if (!user && !error) return null;
 
-  return <Route path={path} component={component} />
+
+  return <Route path={path} component={component} />;
 };
-
-
-
 
 PrivateRoute.propTypes = {
   component: PropTypes.func,
