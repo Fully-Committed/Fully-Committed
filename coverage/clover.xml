@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582587184231" clover="3.2.0">
-  <project timestamp="1582587184231" name="All files">
-    <metrics statements="68" coveredstatements="35" conditionals="18" coveredconditionals="10" methods="30" coveredmethods="9" elements="116" coveredelements="54" complexity="0" loc="68" ncloc="68" packages="8" files="14" classes="14"/>
+<coverage generated="1582686716710" clover="3.2.0">
+  <project timestamp="1582686716710" name="All files">
+    <metrics statements="155" coveredstatements="70" conditionals="35" coveredconditionals="17" methods="65" coveredmethods="18" elements="255" coveredelements="105" complexity="0" loc="155" ncloc="155" packages="9" files="25" classes="25"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
-      <file name="store.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/store.js">
+      <file name="store.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\store.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
         <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="src.actions">
-      <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
-      <file name="authActions.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/actions/authActions.js">
+      <metrics statements="24" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10"/>
+      <file name="authActions.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\authActions.js">
         <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
@@ -22,30 +22,112 @@
         <line num="11" count="2" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="loadingActions.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/actions/loadingActions.js">
+      <file name="currentGroupAction.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\currentGroupAction.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="groupActions.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\groupActions.js">
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="loadingActions.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\actions\loadingActions.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="App.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/App.js">
+      <file name="App.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\App.js">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.adminDataView">
+      <metrics statements="43" coveredstatements="8" conditionals="10" coveredconditionals="0" methods="15" coveredmethods="0"/>
+      <file name="AdminDataView.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\AdminDataView.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="DataView.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\DataView.js">
+        <metrics statements="16" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+      </file>
+      <file name="Dev.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\Dev.js">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="DevList.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\DevList.js">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="Group.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\Group.js">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+      <file name="GroupList.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\adminDataView\GroupList.js">
+        <metrics statements="10" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.auth">
       <metrics statements="13" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="AuthPage.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/auth/AuthPage.js">
+      <file name="AuthPage.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\auth\AuthPage.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
-      <file name="Login.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/auth/Login.js">
+      <file name="Login.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\auth\Login.js">
         <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -53,7 +135,7 @@
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
-      <file name="Signup.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/components/auth/Signup.js">
+      <file name="Signup.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\components\auth\Signup.js">
         <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -65,7 +147,7 @@
     </package>
     <package name="src.hooks">
       <metrics statements="17" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="useAuthForm.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/hooks/useAuthForm.js">
+      <file name="useAuthForm.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\hooks\useAuthForm.js">
         <metrics statements="13" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -81,7 +163,7 @@
         <line num="22" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
       </file>
-      <file name="useVerifyUser.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/hooks/useVerifyUser.js">
+      <file name="useVerifyUser.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\hooks\useVerifyUser.js">
         <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -90,8 +172,8 @@
       </file>
     </package>
     <package name="src.reducers">
-      <metrics statements="12" coveredstatements="12" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-      <file name="authReducer.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/reducers/authReducer.js">
+      <metrics statements="23" coveredstatements="23" conditionals="15" coveredconditionals="15" methods="4" coveredmethods="4"/>
+      <file name="authReducer.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\reducers\authReducer.js">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="cond" truecount="1" falsecount="0"/>
@@ -100,10 +182,27 @@
         <line num="10" count="1" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
       </file>
-      <file name="index.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/reducers/index.js">
+      <file name="currentGroupReducer.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\reducers\currentGroupReducer.js">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+      <file name="groupReducer.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\reducers\groupReducer.js">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\reducers\index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="loadingReducer.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/reducers/loadingReducer.js">
+      <file name="loadingReducer.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\reducers\loadingReducer.js">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
         <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
@@ -114,26 +213,50 @@
       </file>
     </package>
     <package name="src.selectors">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="useSelectors.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/selectors/useSelectors.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="useSelectors.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\selectors\useSelectors.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="9" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="authServices.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-FE/src/services/authServices.js">
+      <metrics statements="28" coveredstatements="7" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="0"/>
+      <file name="adminDataViewServices.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\services\adminDataViewServices.js">
+        <metrics statements="19" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+      <file name="authServices.js" path="C:\Users\jodin\alchemy\Commit-Kitty\Commit-Kitty-FE\src\services\authServices.js">
         <metrics statements="9" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
     </package>
   </project>

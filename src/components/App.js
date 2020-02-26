@@ -1,14 +1,21 @@
 import React from 'react';
-import { useVerifyUser } from '../hooks/useVerifyUser';
+import { BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import { AdminDataView } from './adminDataView/AdminDataView';
 import { AuthPage } from './auth/AuthPage';
-import Header from './header/Header';
+import { useVerifyUser } from '../hooks/useVerifyUser';
+import { PrivateRoute } from './auth/PrivateRoute';
 
 export default function App() {
   useVerifyUser();
   return (
-    <>
-      <Header />
-      <AuthPage />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path='/auth' component={AuthPage} />
+        <PrivateRoute path='/adv' component={AdminDataView} />
+      </Switch>
+    </Router>
   );
 }
