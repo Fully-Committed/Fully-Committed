@@ -5,39 +5,36 @@ import { fetchDevsByName } from '../services/adminGroupFormServices';
 
 export const useAddDev = () => {
   const [devName, setDevName] = useState('');
-  const [devGitHubHandle, setDevGitHubHandle] = useState('')
-  ;
+  const [devGitHubHandle, setDevGitHubHandle] = useState('');
   const [suggestedNamesList, setSuggestedNamesList] = useState([]);
   
   const dispatch = useDispatch();
 
-  const getDevsByName = devName => {
-    return fetchDevsByName(devName)
-      .then(devNameFromFetch => {
-        dispatch(setDevName(devNameFromFetch));
-      })
-      .catch(err => {
-        console.log(err, 'this is the err from getDevsByName');
-      });
-  };
+  useEffect(() => {
+    if(!devName) return; 
+    console.log('in use effect', devName);
+    fetchDevsByName(devName)
+      .then(suggestedNamesList => console.log(setSuggestedNamesList(suggestedNamesList), 'suggested named list')
+      // setSuggestedNamesList(suggestedNamesList)
+      );
+  }, [devName]);
 
 
-  const handleNameSearch = () => {
-    getDevsByName(devName)
-    //update list of devNames for the presentational component
-      .then(list => {
-        // if(list) {
-        //   setSuggestedNamesList(list);
-        // }
-        console.log('this is the current list', list);
-      });
-  };
+
+  // const handleNameSearch = () => {
+  //   getDevsByName(devName)
+  //   //update list of devNames for the presentational component
+  //     .then(list => {
+  //       // if(list) {
+  //       //   setSuggestedNamesList(list);
+  //       // }
+  //       console.log('this is the current list', list);
+  //     });
+  // };
 
   const handleNameInputChange = ({ target }) => {
     setDevName(target.value);
-    handleNameSearch();
   };
-
 
 
   // useEffect(() => {
@@ -65,3 +62,14 @@ export const useAddDev = () => {
 //   };
 //   handleNameSearch();
 // }, [devName]);
+
+
+// const getDevsByName = devName => {
+//   return fetchDevsByName(devName)
+//     .then(devNameFromFetch => {
+//       dispatch(setDevName(devNameFromFetch));
+//     })
+//     .catch(err => {
+//       console.log(err, 'this is the err from getDevsByName');
+//     });
+// };

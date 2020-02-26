@@ -4,7 +4,7 @@ import { useAddDev } from '../../../hooks/useAddDev';
 export const AddDevForm = () => {
   const { handleNameInputChange, handleAddDevSubmit, devGitHubUserName, devName, suggestedNamesList } = useAddDev();
 
-  let names ;
+  let names;
   if(suggestedNamesList.length > 0) {
     names = suggestedNamesList.map((name, i) => (
       <li key={i}>
