@@ -1,3 +1,4 @@
+const access_token = document.cookie.split('=')[1];
 
 export const getGroups = (adminId) => {
   return fetch(`http://localhost:7891/api/v1/group/groups-by-admin/${adminId}`, {
@@ -6,10 +7,7 @@ export const getGroups = (adminId) => {
     .then(res => res.json());
 };
 
-const access_token = document.cookie.split('=')[1];
-
 export const getDevCommits = (arrayOfDevs) => {
-  console.log(access_token);
   return Promise.all(arrayOfDevs.map(dev => {
     const results = { name: dev.name };
     return fetch(`https://api.github.com/users/${dev.gitHubHandle}/repos?sort=pushed`, {
