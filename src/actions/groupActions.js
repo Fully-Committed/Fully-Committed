@@ -31,8 +31,8 @@ export const addGroup = previewGroup => ({
 export const createGroup = groupToPost => dispatch => {
   dispatch(turnLoadingOn());
   return fetchPostNewGroup(groupToPost)
-    .then(group => {
-      dispatch(addGroup(group));
+    .then(() => {
+      // dispatch(addGroup(group));
       dispatch(turnLoadingOff());
     });
 };

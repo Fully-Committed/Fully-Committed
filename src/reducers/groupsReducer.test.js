@@ -19,7 +19,7 @@ describe('group reducer', () => {
     };
 
     const initialState = {
-      groups: []
+      groups: null
     };
 
     const newState = groupsReducer(initialState, action);
@@ -35,7 +35,7 @@ describe('group reducer', () => {
         }],
         groupName: 'My group'
       }]
-    });  
+    });
   });
 
   it('handles group error', () => {
@@ -46,7 +46,7 @@ describe('group reducer', () => {
 
     const newState = groupsReducer(undefined, action);
     expect(newState).toEqual({
-      groups: [],
+      groups: null,
       groupError: 'SHHHIIIIIIT'
     });
   });
@@ -56,9 +56,9 @@ describe('group reducer', () => {
       type: 'POOP'
     };
 
-    const newState = groupsReducer(undefined, action)
+    const newState = groupsReducer(undefined, action);
     expect(newState).toEqual({
-      groups: [], 
+      groups: null,
       groupError: null
     });
   });

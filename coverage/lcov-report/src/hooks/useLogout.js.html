@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/services/authServices.js</title>
+    <title>Code coverage report for src/hooks/useLogout.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/services</a> authServices.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/hooks</a> useLogout.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>1/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>1/9</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -72,36 +72,39 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { request } from './request';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { logoutUser } from '../services/authServices';
 &nbsp;
-export const getSignupUser = <span class="fstat-no" title="function not covered" >us</span>er =&gt; (
-<span class="cstat-no" title="statement not covered" >  request('/api/v1/auth/signup', 'POST', { ...user, role: 'Admin' })</span>
-);
 &nbsp;
-export const getLoginUser = <span class="fstat-no" title="function not covered" >us</span>er =&gt; <span class="cstat-no" title="statement not covered" >request('/api/v1/auth/login', 'POST', user);</span>
-&nbsp;
-export const getVerifyUser = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >request('/api/v1/auth/verify', 'GET');</span>
-&nbsp;
-export const logoutUser = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >request('/api/v1/auth/logout', 'POST');</span>
-&nbsp;
-export const changeRole = <span class="fstat-no" title="function not covered" >(u</span>serId, role) =&gt; <span class="cstat-no" title="statement not covered" >request(`/api/v1/change-role/${userId}`, 'PATCH', role);</span>
-&nbsp;
-export const associateAdminWithGroup = <span class="fstat-no" title="function not covered" >(a</span>dminId, groupId) =&gt; <span class="cstat-no" title="statement not covered" >request(`/api/v1/add-admin/:${groupId}`, 'PATCH', adminId);</span>
+export const useLogout = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+  const handleLogout = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+    const cookies = <span class="cstat-no" title="statement not covered" >document.cookie.split(';');</span>
+<span class="cstat-no" title="statement not covered" >    cookies.forEach(<span class="fstat-no" title="function not covered" >co</span>okie =&gt; {</span>
+      const eqPos = <span class="cstat-no" title="statement not covered" >cookie.indexOf('=');</span>
+      const name = <span class="cstat-no" title="statement not covered" >eqPos &gt; -1 ? cookie.substr(0, eqPos) : cookie;</span>
+<span class="cstat-no" title="statement not covered" >      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';</span>
+    });
+<span class="cstat-no" title="statement not covered" >    logoutUser()</span>
+      .then(window.location.href = ('/auth'));
+  };
+<span class="cstat-no" title="statement not covered" >  return { handleLogout };</span>
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
