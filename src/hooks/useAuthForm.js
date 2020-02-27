@@ -19,7 +19,7 @@ export const useAuthForm = (type) => {
         if(res.type === SET_SESSION_ERROR) {
           throw new Error('Signup/Login Unsuccessful');
         } else {
-          window.location.href = (`https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=repo:status`);
+          window.location.href = (`https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=repo, repo:status`);
         }
       });
   };

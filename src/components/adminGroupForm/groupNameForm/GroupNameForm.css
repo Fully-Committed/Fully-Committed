@@ -1,0 +1,39 @@
+.nameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0px;;
+  }
+
+  font-family: 'hind';
+
+  input {
+    margin: 5px;
+  }
+
+  button {
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    font-size: 20px;
+    &:hover {
+      color: slategray;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 950px) {
+    label { 
+      font-size: 20px;
+    }
+
+    input {
+      height: 27px;
+    }
+  }
+}
