@@ -3,21 +3,20 @@ import { GroupNameForm } from './groupNameForm/GroupNameForm';
 import { AddDevForm } from './addDev/AddDev';
 import { GroupPreview } from './groupPreview/GroupPreview';
 import { useSelector } from 'react-redux';
-import { toGetPreviewDevs } from '../../selectors/useSelectors';
+import { toGetPreviewDevs, toGetUserSession } from '../../selectors/useSelectors';
 import { usePreview } from '../../hooks/usePreview';
 
-const AdminGroupForm = () => {
+export const AdminGroupForm = () => {
   const devsInGroupArray = useSelector(toGetPreviewDevs);
   const { groupName, groupDescription } = usePreview(); 
+  const admin = useSelector(toGetUserSession);
 
   const groupToPost = { 
     groupName: groupName,
     groupDescription: groupDescription, 
     devsInGroup: devsInGroupArray, 
-    adminIds: ['adminID 1']
+    adminIds: [admin._id]
   };
-
-
 
 
   const postGroup = () => {
@@ -36,5 +35,3 @@ const AdminGroupForm = () => {
   );
 };
 
-
-export default AdminGroupForm;
