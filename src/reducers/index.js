@@ -4,11 +4,13 @@ import { groupsReducer } from './groupsReducer';
 import { loadingReducer } from './loadingReducer';
 import { previewGroupReducer } from './previewGroupReducer';
 import { currentGroupReducer } from './currentGroupReducer';
+import { previewGroupAdminsReducer } from './previewGroupAdminsReducer';
 
 export default combineReducers({
   currentGroupReducer,
   authReducer,
   loadingReducer, 
   previewGroupReducer,
-  groupsReducer
+  groupsReducer, 
+  previewGroupAdminsReducer
 });

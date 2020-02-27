@@ -1,9 +1,9 @@
 import { 
   SET_PREVIEW_GROUP_NAME,
+  SET_PREVIEW_GROUP_DESCRIPTION,
   ADD_DEV,
   REMOVE_DEV,
-  SET_SUGGESTED_DEVS, 
-  SET_PREVIEW_GROUP_DESCRIPTION
+  SET_SUGGESTED_DEVS
 } from '../actions/previewGroupActions';
 
 const initialState = { 
