@@ -1,6 +1,9 @@
 import { SET_USER_SESSION, SET_SESSION_ERROR } from '../actions/authActions';
 
-const initialState = { user: null, authError: null };
+const initialState = { 
+  user: null, 
+  authError: null 
+};
 
 export const authReducer = (state = initialState, action) => {
   switch(action.type) {

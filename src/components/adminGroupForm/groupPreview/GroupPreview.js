@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { toGetPreviewGroupName, toGetPreviewDevs, toGetPreviewGroupDescription } from '../../../selectors/useSelectors';
-import { usePreview } from '../../../hooks/usePreview';
+import { usePreview } from '../../../hooks/useGroupPreview';
 
 export const GroupPreview = () => {
   const groupName = useSelector(toGetPreviewGroupName);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePreview } from '../../../hooks/usePreview';
+import { usePreview } from '../../../hooks/useGroupPreview';
 
 export const GroupNameForm = () => {
   const { handleInfoSubmit, handlePreviewNameChange, handlePreviewDescriptionChange } = usePreview();
