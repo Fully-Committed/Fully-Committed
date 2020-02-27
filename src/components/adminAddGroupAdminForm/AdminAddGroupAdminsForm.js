@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useGroupAdminsPreview } from '../../hooks/useGroupAdminsPreview';
 import { setSuggestedAdminsByUsername, setSuggestedAdminsByEmail } from '../../actions/previewAdminsActions';
-//import toGetSuggestedUsers from our selectors file
+import { toGetSuggestedAdmins } from '../../selectors/useSelectors';
 
 
 export const AddGroupAdmins = () => {
@@ -10,8 +10,7 @@ export const AddGroupAdmins = () => {
   const [userEmail, setUserEmail] = useState('');
   const dispatch = useDispatch();
   const { handleAddUserToPreview } = useGroupAdminsPreview();
-  //toGetSuggestedUsers selector relates to previewGroupAdminsReducer
-  const users = useSelector(toGetSuggestedUsers);
+  const users = useSelector(toGetSuggestedAdmins);
 
   const usernameElements = users.map((user, i) => (
     <li onClick={() => {

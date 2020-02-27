@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-//importing toGetPreviewUsers from our selectors
-//importing useGroupAdminsPreview custom hook
+import { toGetPreviewUsers } from '../../selectors/useSelectors';
+import { useGroupAdminsPreview } from '../../hooks/useGroupAdminsPreview';
+
 
 export const GroupPreview = () => {
   const previewUsersArray = useSelector(toGetPreviewUsers);  
@@ -14,7 +15,6 @@ export const GroupPreview = () => {
       <button onClick={()=> handleRemoveUserFromPreview (userPreview)}>X</button>
     </li>
   ));
- 
 
   return (
     <section>

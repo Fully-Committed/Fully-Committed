@@ -1,5 +1,6 @@
 //import fetchUsersByUserName and fetchUsersByEmail from services
 import { turnLoadingOn, turnLoadingOff } from './loadingActions';
+import { fetchUsersByUserName, fetchUsersByEmail } from '../services/adminAddGroupAdminsServices';
 
 
 export const ADD_USER = 'ADD_USER';
@@ -31,4 +32,7 @@ export const setSuggestedAdminsByEmail = email => dispatch => {
   return fetchUsersByEmail(email)
     .then(users => dispatch(setSuggestedAdmins(users)));
 };
+
+//middleware to do a fetch to the backend
+export const updateGroupWithPreviewAdmins = () => {};
 
