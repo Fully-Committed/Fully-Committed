@@ -16,12 +16,9 @@ export const GroupList = () => {
     }
   }, []);
 
-  console.log(groupArray);
-
-
   const listOfGroupElements = groupArray ? groupArray.map(group => (
     <li key={group._id}>
-      <Group {...group} />
+      <Group {...group } />
     </li>
   )) : <h1>Loading...</h1>;
 
@@ -34,3 +31,4 @@ export const GroupList = () => {
   );
 
 };
+

@@ -1,11 +1,32 @@
 ul {
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: column;
+  padding: 0px;
 }
 
 li {
   list-style: none;
+
+  input {
+    display: none;
+  }
+
+
+
+  label {
+    font-family: 'Hind';
+    font-size: 30px;
+
+    &:hover {
+      color: red;
+    }
+
+  }
+  
+  input[type="radio"]:checked+label {
+    color: blue
+  }
+
 
   &:hover {
     cursor: pointer;

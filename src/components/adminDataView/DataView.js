@@ -16,13 +16,13 @@ export const DataView = () => {
     });
   }
 
-  const render = groupCommits ? sortedCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
+  const render = groupCommits ? sortedCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <div className={styles.watermark}><img className={styles.githubwatermark} src='https://www.stickpng.com/assets/images/5847f98fcef1014c0b5e48c0.png' /></div>;
 
   return (
     <section className={styles.dataview}>
       <div className={styles.topOfBox}>
         <h2>Group Commits: </h2>
-        <button onClick={handleGetCommits}>Refresh Commits</button>
+        <button className={styles.refresh} onClick={handleGetCommits}>Refresh Commits</button>
       </div>
       <div>
         {render}

@@ -8,11 +8,24 @@ export const Dev = ({ imageURL, timestamp, displayName, commitMessage, repoName 
 
   return (
     <section className={styles.dev}>
-      <img src={imageURL} />
-      <h4>Name: {displayName}</h4>
-      <p><b>Repo:</b> {repoName}</p>
-      <p><b>Commit Message:</b> {commitMessage}</p>
-      <p><b>Timestamp of last commit:</b> {formattedDate}</p>
+      <section className={styles.devNameAndPic}>
+        <img src={imageURL} className={styles.avatar} />
+        <div className={styles.devName}>
+          <h4>{displayName}</h4>
+        </div>
+      </section>
+      <div className={styles.devRepo}>
+        <p><b>Repo:</b></p>
+        <p>{repoName}</p>
+      </div>
+      <div className={styles.devMessage}>
+        <p><b>Commit Message:</b></p>
+        <p>{commitMessage}</p>
+      </div>
+      <div className={styles.devTime}>
+        <p><b>Timestamp of last commit:</b></p>
+        <p>{formattedDate}</p>
+      </div>
     </section>
   );
 };

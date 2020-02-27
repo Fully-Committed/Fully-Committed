@@ -3,11 +3,30 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
-img, h4, p {
-      margin: 10px;
+.devName, .devRepo, .devMessage, .devTime {
+  flex-direction: column;
 }
+
+.devNameAndPic {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.devRepo {
+  display: none
+}
+
+p {
+  margin: 10px;
+}
+
+.avatar, h4 {
+  margin: 3px;
+}
+
 
 h4, p {
   font-family: 'Roboto Mono'
