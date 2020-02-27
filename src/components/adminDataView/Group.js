@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { setCurrentGroup } from '../../actions/currentGroupAction';
@@ -10,6 +10,7 @@ export const Group = ({ groupName, groupDescription, devsInGroup }) => {
 
   const handleClick = () => {
     dispatch(setCurrentGroup(devsInGroup));
+
   };
 
   return (

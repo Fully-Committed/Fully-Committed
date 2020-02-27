@@ -1,0 +1,14 @@
+.dev {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+img, h4, p {
+      margin: 10px;
+}
+
+h4, p {
+  font-family: 'Roboto Mono'
+}

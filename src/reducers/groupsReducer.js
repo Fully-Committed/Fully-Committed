@@ -5,7 +5,7 @@ const initialState = {
   error: null,
 };
 
-export const groupReducer = (state = initialState, action) => {
+export const groupsReducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_GROUP_SESSION:
       return { ...state, groups: action.payload };

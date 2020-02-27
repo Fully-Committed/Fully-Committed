@@ -1,4 +1,30 @@
 img {
-  border-radius: 100%;
-  height: 40px
+    border-radius: 100%;
+    height: 40px
+}
+
+.dataview {
+  border: 1px solid slategray;
+  border-radius: 10px;
+
+}
+
+.topOfBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+button {
+  font-family: 'Hind';
+  font-size: 20px;  
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid slategray
 }

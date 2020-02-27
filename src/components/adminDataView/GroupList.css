@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+li {
+  list-style: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  h2 {
+    width: 200px;
+    text-align: center;
+  }
+
+  h2:hover {
+    background-color: slategrey;
+    color: white;
+  }
+}

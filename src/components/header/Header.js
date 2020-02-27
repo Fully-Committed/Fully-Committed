@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <>
       <h1>Commit Kitty</h1>
+      
     </>
   );
 };

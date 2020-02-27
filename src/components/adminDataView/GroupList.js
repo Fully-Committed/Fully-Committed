@@ -3,6 +3,7 @@ import { Group } from './Group';
 import { useSelector, useDispatch } from 'react-redux';
 import { toGetUserSession, toGetGroupArray } from '../../selectors/useSelectors';
 import { setGroupArray } from '../../actions/groupActions';
+import styles from './GroupList.css';
 
 export const GroupList = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,8 @@ export const GroupList = () => {
       dispatch(setGroupArray(user._id));
     }
   }, []);
+
+  console.log(groupArray);
 
 
   const listOfGroupElements = groupArray ? groupArray.map(group => (
