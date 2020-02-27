@@ -38,7 +38,12 @@ form {
     border: 1px solid slategray;
     padding: 5px;
     border-radius: 5px;
-    margin: 5px
+    margin: 5px;
+
+    &:hover {
+      color: slategray;
+      background-color: white;
+    }
 
   }
 

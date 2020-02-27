@@ -25,21 +25,22 @@ export const GroupPreview = () => {
   return (
     <section className={styles.preview}>
       <h2>Group Preview</h2>
-      <section className={styles.groupnamepreview}>
-        <section className={styles.individualpreview}>
-          <h4>Group Name:</h4>
-          <p>{groupName}</p>
-        </section>
-        <section className={styles.individualpreview}>
+      <section className={styles.previewWorkArea}>
+        <section className={styles.groupnamepreview}>
+          <section className={styles.individualpreview}>
+            <h4>Group Name:</h4>
+            <p>{groupName}</p>
+          </section>
+          <section className={styles.individualpreview}>
 
-          <h4>Group Description:</h4>
-          <p>{groupDescription}</p>
+            <h4>Group Description:</h4>
+            <p>{groupDescription}</p>
+          </section>
         </section>
+        <ul>
+          {listOfPreviewDevs}
+        </ul>
       </section>
-      <ul>
-        {listOfPreviewDevs}
-      </ul>
     </section>
   );
 };
-

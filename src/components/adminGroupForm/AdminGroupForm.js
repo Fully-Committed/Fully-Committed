@@ -34,8 +34,8 @@ export const AdminGroupForm = () => {
       </section>
       <section className={styles.preview}>
         <GroupPreview />
-        <Link to='/'><button onClick={() => postGroup(groupToPost)}>Create Group</button></Link>
       </section>
+      <Link to='/'><button className={styles.createGroupButton} onClick={() => postGroup(groupToPost)}>Create Group</button></Link>
 
     </section>
   );
