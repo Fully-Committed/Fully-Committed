@@ -44,4 +44,12 @@ h4, p {
   .devRepo {
     display: block;
   }
+  .devRepo, .devMessage {
+    width: 180px;
+  }
+  
+  .devTime {
+    width: 200px;
+  }
+
 }
