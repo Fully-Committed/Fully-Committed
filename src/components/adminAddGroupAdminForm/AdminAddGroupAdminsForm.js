@@ -3,16 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useGroupAdminsPreview } from '../../hooks/useGroupAdminsPreview';
 
 
-export const AddDevForm = () => {
+export const AddGroupAdmins = () => {
   const [userUsername, setUserUsername] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const dispatch = useDispatch();
-
   const { handleAddUserToPreview } = useGroupAdminsPreview();
-
   //toGetSuggestedUsers selector relates to addGroupAdminsReducer
   const users = useSelector(toGetSuggestedUsers);
-
 
   const usernameElements = users.map((user, i) => (
     <li onClick={() => {
