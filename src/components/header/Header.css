@@ -12,6 +12,24 @@ header {
     margin-bottom: 0px;
     line-height: 30px;
   }
+
+  .logout {
+    color: slategray;
+    background-color: white;
+    padding: 3px;
+    font-family: 'Hind';
+    border: 1px solid slategray;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+
+    &:hover {
+      color:white;
+      background-color: slategrey;
+      cursor: pointer;
+    }
+  }
 }
 
 .headerImage {
@@ -19,6 +37,7 @@ header {
   height: 100px;
   opacity: 100%;
 }
+
 
 .navLinks {
   display: flex;
@@ -42,6 +61,11 @@ header {
  header {
    h1 {
      width: 200px
+   }
+
+   .logout {
+     top: 5px;
+     bottom: auto
    }
  }
 
