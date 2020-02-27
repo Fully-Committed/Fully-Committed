@@ -7,6 +7,6 @@ export const fetchUsersByEmail = email => request(`/api/v1/auth/user-email/${ema
 
 
 //in the input for below user=a user ID, role is either 'Admin' or 'Dev' and group is a group id
-export const changeRole = (userId, role) => request(`/api/v1/auth/change-role/${userId}`, 'PATCH', role);
+export const fetchPatchUserRole = (userId, role) => request(`/api/v1/auth/change-role/${userId}`, 'PATCH', role);
 
 export const associateAdminWithGroup = (adminId, groupId) => request(`/api/v1/auth/add-admin/:${groupId}`, 'PATCH', adminId);
