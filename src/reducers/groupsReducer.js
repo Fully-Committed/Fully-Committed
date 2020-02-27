@@ -1,7 +1,7 @@
 import { SET_GROUP_SESSION, SET_GROUP_ERROR, ADD_GROUP } from '../actions/groupActions';
 
 const initialState = {
-  groups: [],
+  groups: null,
   groupError: null
 };
 
