@@ -12,14 +12,3 @@ export const authorizeUser = (user, authFunction) => dispatch => {
     })
     .catch(error => dispatch({ type: SET_SESSION_ERROR, payload: error }));
 };
-
-
-
-
-
-/*Notes for afterlunch
-
-- in actions, we need to make verify user, and authenticate user? 
-  - use effect that checks verify route with user from state as well as checking cookies for a user
-  - useEffect (in useVerify hook) called on every page
-*/
