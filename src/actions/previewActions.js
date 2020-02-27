@@ -1,4 +1,4 @@
-import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev } from '../services/adminGroupFormServices';
+import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev, fetchPostNewGroup } from '../services/adminGroupFormServices';
 import { turnLoadingOn, turnLoadingOff } from '../actions/loadingActions';
 import { isHandleOnGitHub } from '../services/gitHubUserServices';
 
@@ -66,3 +66,18 @@ export const removeDev = previewDev => ({
   type: REMOVE_DEV,
   payload: previewDev
 });
+
+export const CLEAR_STATE = 'CLEAR_STATE';
+export const clearState = () => ({
+  type: CLEAR_STATE
+});
+
+export const createGroup = groupToPost => dispatch => {
+  dispatch(turnLoadingOn());
+  return fetchPostNewGroup(groupToPost)
+    .then(() => {
+      dispatch(clearState());
+      dispatch(turnLoadingOff());
+    });
+};
+

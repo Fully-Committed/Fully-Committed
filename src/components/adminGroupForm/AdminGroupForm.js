@@ -4,7 +4,7 @@ import { AddDevForm } from './addDev/AddDev';
 import { GroupPreview } from './groupPreview/GroupPreview';
 import { useSelector, useDispatch } from 'react-redux';
 import { toGetPreviewDevs, toGetUserSession, toGetPreviewGroupName, toGetPreviewGroupDescription } from '../../selectors/useSelectors';
-import { createGroup } from '../../actions/groupActions';
+import { createGroup } from '../../actions/previewActions';
 
 export const AdminGroupForm = () => {
   const devsInGroupArray = useSelector(toGetPreviewDevs);
