@@ -1,5 +1,5 @@
 import { SET_GROUP_SESSION, SET_GROUP_ERROR } from '../actions/groupActions';
-import { groupReducer } from './groupReducer';
+import { groupsReducer } from './groupsReducer';
 
 describe('group reducer', () => {
   it('handles set grouparray', () => {
@@ -22,7 +22,7 @@ describe('group reducer', () => {
       groups: []
     };
 
-    const newState = groupReducer(initialState, action);
+    const newState = groupsReducer(initialState, action);
     expect(newState).toEqual({
       groups: [{
         admindIds: ['12', '34', 'adminId'],
@@ -44,22 +44,22 @@ describe('group reducer', () => {
       payload: 'SHHHIIIIIIT'
     };
 
-    const newState = groupReducer(undefined, action);
+    const newState = groupsReducer(undefined, action);
     expect(newState).toEqual({
-      groups: null,
-      error: 'SHHHIIIIIIT'
+      groups: [],
+      groupError: 'SHHHIIIIIIT'
     });
   });
 
   it('handles default', () => {
     const action = {
       type: 'POOP'
-    }
+    };
 
-    const newState = groupReducer(undefined, action)
+    const newState = groupsReducer(undefined, action);
     expect(newState).toEqual({
-      groups: null, 
-      error: null
+      groups: [], 
+      groupError: null
     });
   });
 });

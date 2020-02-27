@@ -7,6 +7,8 @@ export const useGetCommits = () => {
   const [groupCommits, setGroupCommits] = useState();
   const currentGroup = useSelector(toGetCurrentGroup);
 
+  console.log(currentGroup, 'ON HOOK')
+
   useEffect(() => {
     handleGetCommits();
   }, [currentGroup]);
@@ -31,5 +33,5 @@ export const useGetCommits = () => {
     }
   };
 
-  return { handleGetCommits, groupCommits, dateInMS };
+  return { handleGetCommits, groupCommits, dateInMS, currentGroup };
 };

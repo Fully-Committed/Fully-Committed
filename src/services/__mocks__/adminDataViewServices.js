@@ -1,4 +1,4 @@
-export const getGroups = (adminId) => {
+export const getGroups = adminId => {
   return Promise.resolve([{
     admindIds: ['12', '34', adminId],
     devsInGroups: [{
