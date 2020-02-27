@@ -14,7 +14,6 @@ export const removeUser = previewUser => ({
   payload: previewUser
 });
 
-
 export const SET_SUGGESTED_ADMINS = 'SET_SUGGESTED_ADMINS';
 export const setSuggestedAdmins = users => ({
   type: SET_SUGGESTED_ADMINS,
