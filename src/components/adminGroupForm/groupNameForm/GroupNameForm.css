@@ -1,0 +1,23 @@
+.nameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'hind';
+
+  input {
+    margin: 5px;
+  }
+
+  button {
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    &:hover {
+      color: slategray;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
