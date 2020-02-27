@@ -8,6 +8,8 @@ img {
   border-radius: 10px;
   min-height: 400px;
   max-width: 80vw;
+  min-height: 425px;
+  overflow-y: scroll;
 
 }
 
