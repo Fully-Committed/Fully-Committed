@@ -7,6 +7,7 @@ import { AdminDataView } from './adminDataView/AdminDataView';
 import { AuthPage } from './auth/AuthPage';
 import { PrivateRoute } from './auth/PrivateRoute';
 import Header from '../components/header/Header';
+import './App.css';
 
 export default function App() {
   return (

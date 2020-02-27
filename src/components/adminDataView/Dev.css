@@ -1,0 +1,55 @@
+.dev {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.devName, .devRepo, .devMessage, .devTime {
+  flex-direction: column;
+}
+
+.devRepo, .devMessage {
+  width: 120px;
+}
+
+.devTime {
+  width: 165px;
+}
+
+.devNameAndPic {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.devRepo {
+  display: none
+}
+
+p {
+  margin: 0 10px;
+}
+
+.avatar, h4 {
+  margin: 3px;
+}
+
+
+h4, p {
+  font-family: 'Roboto Mono'
+}
+
+@media (min-width: 950px) {
+  .devRepo {
+    display: block;
+  }
+  .devRepo, .devMessage {
+    width: 180px;
+  }
+  
+  .devTime {
+    width: 200px;
+  }
+
+}
