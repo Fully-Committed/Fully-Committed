@@ -4,6 +4,7 @@
   justify-content: center;
   height: 120px;
   align-items: center;
+  font-family: 'Hind';
 
 .authLinks {
   display: flex;
@@ -49,11 +50,24 @@ form {
 .loginsignup {
   padding: 5px;
   border: 1px solid slategray;
+  border-radius: 5px;
   height: 150px;
   justify-content: space-between;
+  color: slategrey;
+  font-family: 'Hind';
   label {
     margin: 5px
   }
+}
 
-  
+@media (min-width: 950px) {
+  .loginsignup {
+    width: 300px
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
