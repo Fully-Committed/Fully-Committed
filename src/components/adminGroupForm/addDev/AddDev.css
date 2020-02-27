@@ -41,12 +41,16 @@ form {
     margin: 5px
 
   }
-  
+
   .inactive {
     opacity: 20%;
   }
 
   .active {
     opacity: 100%;
+  }
+
+  .previewDevName {
+    font-family: 'hind';
   }
 }

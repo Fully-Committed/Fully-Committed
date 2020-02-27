@@ -16,7 +16,7 @@ export const AddDevForm = () => {
   const devs = useSelector(toGetSuggestedDevs);
 
   const nameElements = devs.map((dev, i) => (
-    <li onClick={() => {
+    <li className={styles.previewDevName} onClick={() => {
       handleAddDevToPreview(dev);
       setDevName('');
     }} key={i}>
@@ -25,7 +25,7 @@ export const AddDevForm = () => {
   ));
 
   const handleElements = devs.map((dev, i) => (
-    <li onClick={() => {
+    <li className={styles.previewDevName} onClick={() => {
       handleAddDevToPreview(dev);
       setHandle('');
     }} key={i}>

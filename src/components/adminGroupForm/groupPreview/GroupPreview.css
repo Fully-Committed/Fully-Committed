@@ -1,0 +1,49 @@
+.preview {
+  font-family: 'Hind';
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .groupnamepreview {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+  .individualpreview {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.previewLi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 5px;
+
+  button {
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+  
+  }
+
+  .previewDevName {
+    font-family: 'hind';
+  }
+}
