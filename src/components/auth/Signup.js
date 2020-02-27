@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthForm } from '../../hooks/useAuthForm';
+import styles from './Auth.css';
 
 export const Signup = () => {
 
@@ -7,7 +8,7 @@ export const Signup = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.loginsignup} onSubmit={handleSubmit}>
         <label>Username: <input type="text" value={userName} onChange={({ target }) => setUserName(target.value)} /></label>
         <label>Email: <input type="text" value={email} onChange={({ target }) => setEmail(target.value)} /></label>
         <label>Password: <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} /></label>
