@@ -26,4 +26,3 @@ export const toGetGroupError = state => state.groupsReducer.groupError;
 export const toGetCurrentGroup = state => state.currentGroupReducer.currentGroup;
 
 export const toGetUserError = state => state.authReducer.authError;
-

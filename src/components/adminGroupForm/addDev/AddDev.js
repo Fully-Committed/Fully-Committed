@@ -18,7 +18,9 @@ export const AddDevForm = () => {
   const nameElements = devs.map((dev, i) => (
     <li className={styles.previewDevName} onClick={() => {
       handleAddDevToPreview(dev);
-      setDevName('');
+      setDevName(''); 
+      setHandle('');
+
     }} key={i}>
       {dev.devName}
     </li>
@@ -28,6 +30,8 @@ export const AddDevForm = () => {
     <li className={styles.previewDevName} onClick={() => {
       handleAddDevToPreview(dev);
       setHandle('');
+      setDevName(''); 
+
     }} key={i}>
       {dev.devGitHubHandle}
     </li>

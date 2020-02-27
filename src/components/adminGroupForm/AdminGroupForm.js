@@ -7,6 +7,7 @@ import { toGetPreviewDevs, toGetUserSession, toGetPreviewGroupName, toGetPreview
 import { createGroup } from '../../actions/groupActions';
 import { Link } from 'react-router-dom';
 import styles from './AdminGroupForm.css';
+import { createGroup } from '../../actions/previewActions';
 
 export const AdminGroupForm = () => {
   const devsInGroupArray = useSelector(toGetPreviewDevs);
