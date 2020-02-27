@@ -18,6 +18,8 @@ export const AddDevForm = () => {
     <li onClick={() => {
       handleAddDevToPreview(dev);
       setDevName(''); 
+      setHandle('');
+
     }} key={i}>
       {dev.devName}
     </li>
@@ -27,6 +29,8 @@ export const AddDevForm = () => {
     <li onClick={() => {
       handleAddDevToPreview(dev);
       setHandle('');
+      setDevName(''); 
+
     }} key={i}>
       {dev.devGitHubHandle}
     </li>
