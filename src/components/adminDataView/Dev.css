@@ -1,7 +1,7 @@
 .dev {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   margin-top: 10px;
 }
@@ -20,7 +20,7 @@
 }
 
 p {
-  margin: 10px;
+  margin: 0 10px;
 }
 
 .avatar, h4 {
@@ -30,4 +30,10 @@ p {
 
 h4, p {
   font-family: 'Roboto Mono'
+}
+
+@media (min-width: 950px) {
+  .devRepo {
+    display: block;
+  }
 }
