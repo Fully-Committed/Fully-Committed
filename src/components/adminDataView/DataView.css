@@ -1,4 +1,69 @@
 img {
-  border-radius: 100%;
-  height: 40px
+    border-radius: 100%;
+    height: 40px
+}
+
+.dataview {
+  border: 1px solid slategray;
+  border-radius: 10px;
+  min-height: 400px;
+  width: 350px;
+  min-height: 425px;
+  overflow-y: scroll;
+  margin-top: 20px;
+
+}
+
+.topOfBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.refresh {
+  font-family: 'Hind';
+  font-size: 15px;  
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid slategray;
+  background-color: slategray;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: slategray;
+  }
+
+}
+
+.githubwatermark {
+  opacity: 15%;
+  height: 200px;
+}
+
+.watermark {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (min-width: 950px) {
+  .dataview {
+    height: 500px;
+    margin-left: 20px;
+    width: 700px;
+  }
+
+  .refresh {
+    font-size: 20px;
+    height: 50px;
+  }
+
+
 }

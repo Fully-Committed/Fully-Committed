@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid slategrey;
+  margin-bottom: 10px;
+}
+
+.headerImage {
+  width: 100px;
+  height: 100px;
+  opacity: 100%;
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
+
+h1, h2 {
+  font-family: 'Hind';
+}
+
+a:hover {
+  cursor: pointer;
+}
