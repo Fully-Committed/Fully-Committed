@@ -1,4 +1,4 @@
-import { SET_USER_SESSION, SET_SESSION_ERROR } from '../actions/authActions';
+import { SET_USER_SESSION, SET_SESSION_ERROR, clearUserSession } from '../actions/authActions';
 import { authReducer } from './authReducer';
 
 describe('auth reducer', () => {
@@ -19,7 +19,8 @@ describe('auth reducer', () => {
       user: {
         email: 'joel@joel.com',
         userName: 'Joel'
-      }
+      },
+      authError: null
     });
   });
 
@@ -34,6 +35,23 @@ describe('auth reducer', () => {
     expect(newState).toEqual({ authError: 'OH NO!!!!' });
   });
 
+  it('handles clearing a user', () => {
+    const action = clearUserSession();
+    const initialState = {
+      user: {
+        email: 'joel@joel.com'
+      },
+      authError: {
+        error: 'Whatever we want it to be'
+      }
+    };
+    const newState = authReducer(initialState, action);
+    expect(newState).toEqual({
+      user: null,
+      authError: null
+    });
+  });
+
   it('handles unrecognized action', () => {
     const action = {
       type: 'POOP'
@@ -45,4 +63,5 @@ describe('auth reducer', () => {
       authError: null
     });
   });
+
 });

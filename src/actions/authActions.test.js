@@ -1,4 +1,4 @@
-import { SET_USER_SESSION, authorizeUser } from './authActions';
+import { SET_USER_SESSION, authorizeUser, clearUserSession } from './authActions';
 import { getSignupUser, getLoginUser } from '../services/authServices';
 
 jest.mock('../services/authServices');
@@ -33,5 +33,10 @@ describe('Auth actions', () => {
           }
         });
       });
+  });
+
+  it('can call a clear user session action', () => {
+    const action = clearUserSession();
+    expect(action.type).toEqual('CLEAR_USER_SESSION');
   });
 });

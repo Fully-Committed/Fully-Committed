@@ -21,7 +21,6 @@ export const AdminGroupForm = () => {
   };
 
   const postGroup = group => {
-    console.log(group, 'this is the group to post');
     return dispatch(createGroup(group));
   };
 
