@@ -1,5 +1,5 @@
 import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev } from '../services/adminGroupFormServices';
-import { turnLoadingOn, turnLoadingOff } from '../actions/loadingActions';
+import { turnLoadingOn, turnLoadingOff } from './loadingActions';
 import { isHandleOnGitHub } from '../services/gitHubUserServices';
 
 

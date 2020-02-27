@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setPreviewGroupName, addDev, removeDev, createDev, setPreviewGroupDescription } from '../actions/previewActions';
+import { setPreviewGroupName, addDev, removeDev, createDev, setPreviewGroupDescription } from '../actions/previewGroupActions';
 
 export const usePreview = () => {
   const [groupName, setGroupName] = useState('');

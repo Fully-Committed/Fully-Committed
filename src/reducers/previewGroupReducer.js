@@ -4,7 +4,7 @@ import {
   REMOVE_DEV,
   SET_SUGGESTED_DEVS, 
   SET_PREVIEW_GROUP_DESCRIPTION
-} from '../actions/previewActions';
+} from '../actions/previewGroupActions';
 
 const initialState = { 
   previewName: null,
@@ -13,7 +13,7 @@ const initialState = {
   suggestedDevs: []
 };
 
-export const previewReducer = (state = initialState, action) => {
+export const previewGroupReducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_PREVIEW_GROUP_NAME:
       return { ...state, previewName: action.payload };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { usePreview } from '../../../hooks/useGroupPreview';
 import { toGetSuggestedDevs } from '../../../selectors/useSelectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSuggestedDevsByName, setSuggestedDevsByHandle } from '../../../actions/previewActions';
+import { setSuggestedDevsByName, setSuggestedDevsByHandle } from '../../../actions/previewGroupActions';
 
 
 export const AddDevForm = () => {

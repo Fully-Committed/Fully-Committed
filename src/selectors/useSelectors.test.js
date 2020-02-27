@@ -22,7 +22,7 @@ describe('selectors', () => {
 
   it('cant return the correct preview name from state for preview reducer', () => {
     const state = {
-      previewReducer: {
+      previewGroupReducer: {
         previewName: 'preview group name'
       }
     };
@@ -31,7 +31,7 @@ describe('selectors', () => {
 
   it('cant return the correct preview dev from state for preview reducer', () => {
     const state = {
-      previewReducer: {
+      previewGroupReducer: {
         previewDevs: {
           _id: '1234',
           devName: 'tess',
