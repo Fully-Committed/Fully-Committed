@@ -1,5 +1,5 @@
 export const request = (path, method, body) => {
-  return fetch(`http://localhost:7891${path}`, {
+  return fetch(`${process.env.API_URL}${path}`, {
     method,
     headers: {
       'Content-Type': 'application/json'

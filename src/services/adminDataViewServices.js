@@ -1,7 +1,7 @@
 const access_token = document.cookie.split('=')[1];
 
 export const getGroups = (adminId) => {
-  return fetch(`http://localhost:7891/api/v1/group/groups-by-admin/${adminId}`, {
+  return fetch(`${process.env.API_URL}/api/v1/group/groups-by-admin/${adminId}`, {
     credentials: 'include'
   })
     .then(res => res.json());
