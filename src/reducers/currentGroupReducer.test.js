@@ -33,9 +33,9 @@ describe('current group reducer', () => {
   it('handles default', () => {
     const action = {
       type: 'POOP'
-    }
+    };
 
-    const newState = currentGroupReducer(undefined, action)
+    const newState = currentGroupReducer(undefined, action);
     expect(newState).toEqual({
       currentGroup: null
     });

@@ -1,4 +1,4 @@
-import { SET_USER_SESSION, SET_SESSION_ERROR } from '../actions/authActions';
+import { SET_USER_SESSION, SET_SESSION_ERROR, clearUserSession } from '../actions/authActions';
 import { authReducer } from './authReducer';
 
 describe('auth reducer', () => {
@@ -19,19 +19,37 @@ describe('auth reducer', () => {
       user: {
         email: 'joel@joel.com',
         userName: 'Joel'
-      }
+      },
+      authError: null
     });
   });
 
-  it('handles an error action', () => {
+  it('handles an auth error action', () => {
     const action = {
       type: SET_SESSION_ERROR,
       payload: 'OH NO!!!!'
     };
 
-    const initialState = { error: null };
+    const initialState = { authError: null };
     const newState = authReducer(initialState, action);
-    expect(newState).toEqual({ error: 'OH NO!!!!' });
+    expect(newState).toEqual({ authError: 'OH NO!!!!' });
+  });
+
+  it('handles clearing a user', () => {
+    const action = clearUserSession();
+    const initialState = {
+      user: {
+        email: 'joel@joel.com'
+      },
+      authError: {
+        error: 'Whatever we want it to be'
+      }
+    };
+    const newState = authReducer(initialState, action);
+    expect(newState).toEqual({
+      user: null,
+      authError: null
+    });
   });
 
   it('handles unrecognized action', () => {
@@ -42,7 +60,8 @@ describe('auth reducer', () => {
     const newState = authReducer(undefined, action);
     expect(newState).toEqual({
       user: null,
-      error: null
+      authError: null
     });
   });
+
 });

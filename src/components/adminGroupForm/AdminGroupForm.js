@@ -1,13 +1,37 @@
 import React from 'react';
-import SearchExistingDev from './searchExistingDev/SearchExistingDev';
-import AddNewDev from './addNewDev/AddNewDev';
+import { GroupNameForm } from './groupNameForm/GroupNameForm';
+import { AddDevForm } from './addDev/AddDev';
+import { GroupPreview } from './groupPreview/GroupPreview';
+import { useSelector, useDispatch } from 'react-redux';
+import { toGetPreviewDevs, toGetUserSession, toGetPreviewGroupName, toGetPreviewGroupDescription } from '../../selectors/useSelectors';
+import { createGroup } from '../../actions/groupActions';
 
-const AdminGroupForm = () => (
-  <>
-    <SearchExistingDev />
-    <AddNewDev />
-  </>
-);
+export const AdminGroupForm = () => {
+  const devsInGroupArray = useSelector(toGetPreviewDevs);
+  const groupName = useSelector(toGetPreviewGroupName);
+  const groupDescription = useSelector(toGetPreviewGroupDescription);
+  const admin = useSelector(toGetUserSession);
+  const dispatch = useDispatch();
 
+  const groupToPost = { 
+    groupName: groupName,
+    groupDescription: groupDescription, 
+    devsInGroup: devsInGroupArray, 
+    adminIds: [admin._id]
+  };
 
-export default AdminGroupForm;
+  const postGroup = group => {
+    return dispatch(createGroup(group));
+  };
+
+  return (
+    <>
+      <GroupNameForm />
+      <AddDevForm />
+      <GroupPreview />
+      
+      <button onClick={() => postGroup(groupToPost)}>Create Group</button>
+    </>
+  );
+};
+
