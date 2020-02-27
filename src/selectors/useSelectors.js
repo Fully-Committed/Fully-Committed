@@ -6,6 +6,8 @@ export const toGetUserSession = state => state.authReducer.user;
 //selectors for previewReducer
 export const toGetPreviewGroupName = state => state.previewReducer.previewName;
 
+export const toGetPreviewGroupDescription = state => state.previewReducer.previewDescription;
+
 export const toGetPreviewDevs = state => state.previewReducer.previewDevs;
 
 export const toGetSuggestedDevs = state => {

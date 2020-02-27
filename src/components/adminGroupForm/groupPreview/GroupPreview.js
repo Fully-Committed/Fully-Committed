@@ -1,17 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { toGetPreviewGroupName, toGetPreviewDevs } from '../../../selectors/useSelectors';
+import { toGetPreviewGroupName, toGetPreviewDevs, toGetPreviewGroupDescription } from '../../../selectors/useSelectors';
 import { usePreview } from '../../../hooks/usePreview';
 
 export const GroupPreview = () => {
   const groupName = useSelector(toGetPreviewGroupName);
-  const previewDevsArray = useSelector(toGetPreviewDevs);
-  console.log(previewDevsArray, 'PREVIEW DEVS ARRAY');
-  
+  const groupDescription = useSelector(toGetPreviewGroupDescription);
+  const previewDevsArray = useSelector(toGetPreviewDevs);  
+
   const { handleRemoveDevFromPreview } = usePreview(); 
 
   const listOfPreviewDevs = previewDevsArray.map(devPreview => {
-    console.log(devPreview, 'DEVPREVIEWWWW');
     
     return (
       <li key={devPreview._id}>
@@ -26,6 +25,7 @@ export const GroupPreview = () => {
     <section>
       <h2>Group Preview</h2>
       <h3>Group Name: {groupName}</h3>
+      <h3>Group Description: {groupDescription}</h3>
       <ul>
         {listOfPreviewDevs}
       </ul>

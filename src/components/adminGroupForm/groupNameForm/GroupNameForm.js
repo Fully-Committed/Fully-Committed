@@ -2,12 +2,13 @@ import React from 'react';
 import { usePreview } from '../../../hooks/usePreview';
 
 export const GroupNameForm = () => {
-  const { handleGroupNameSubmit, handlePreviewNameChange } = usePreview();
+  const { handleInfoSubmit, handlePreviewNameChange, handlePreviewDescriptionChange } = usePreview();
 
   return (
-    <form onSubmit={handleGroupNameSubmit}>
+    <form onSubmit={handleInfoSubmit}>
       <input type="text" placeholder='groupname' onChange={handlePreviewNameChange} />  
-      <button>Preview Name</button>
+      <input type="text" placeholder='group description' onChange={handlePreviewDescriptionChange} />  
+      <button>Preview Info</button>
     </form>
   );
 };

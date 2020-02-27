@@ -9,6 +9,12 @@ export const setPreviewGroupName = previewName => ({
   payload: previewName
 });
 
+export const SET_PREVIEW_GROUP_DESCRIPTION = 'SET_PREVIEW_GROUP_DESCRIPTION';
+export const setPreviewGroupDescription = previewDescription => ({
+  type: SET_PREVIEW_GROUP_DESCRIPTION, 
+  payload: previewDescription
+});
+
 export const ADD_DEV = 'ADD_DEV';
 export const addDev = previewDev => ({
   type: ADD_DEV, 

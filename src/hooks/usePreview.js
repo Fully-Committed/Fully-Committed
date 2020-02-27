@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setPreviewGroupName, addDev, removeDev, createDev } from '../actions/previewActions';
+import { setPreviewGroupName, addDev, removeDev, createDev, setPreviewGroupDescription } from '../actions/previewActions';
 
 export const usePreview = () => {
   const [groupName, setGroupName] = useState('');
+  const [groupDescription, setGroupDescription] = useState('');
   const [, setGroupDev] = useState();
   const [, setPreviewDev] = useState(); 
 
@@ -13,9 +14,14 @@ export const usePreview = () => {
     setGroupName(target.value);
   };
 
-  const handleGroupNameSubmit = () => {
+  const handlePreviewDescriptionChange = ({ target }) => {
+    setGroupDescription(target.value);
+  };
+
+  const handleInfoSubmit = () => {
     event.preventDefault();
     dispatch(setPreviewGroupName(groupName));
+    dispatch(setPreviewGroupDescription(groupDescription));
   };
 
   const handleAddDevToPreview = devClicked => {
@@ -31,8 +37,8 @@ export const usePreview = () => {
   const handleAddDevHandleCheckAgainstGitHub = (gitHubHandle, name) => {
     return dispatch(createDev(gitHubHandle, name))
       .then(dev => setGroupDev(dev));
-
   }; 
 
-  return { handleGroupNameSubmit, setGroupName, handlePreviewNameChange, handleAddDevToPreview, handleRemoveDevFromPreview, handleAddDevHandleCheckAgainstGitHub };
+
+  return { handleInfoSubmit, setGroupName, handlePreviewNameChange, handleAddDevToPreview, handleRemoveDevFromPreview, handleAddDevHandleCheckAgainstGitHub, handlePreviewDescriptionChange };
 };
