@@ -1,4 +1,4 @@
-import { toGetLoading, toGetUserSession, toGetPreviewGroupName, toGetPreviewDevs } from './useSelectors';
+import { toGetLoading, toGetUserSession, toGetPreviewGroupName, toGetPreviewDevs, toGetGroupArray, toGetCurrentGroup } from './useSelectors';
 
 describe('selectors', () => {
   it('can return correct loading info from state', () => {
@@ -11,7 +11,7 @@ describe('selectors', () => {
     expect(toGetLoading(state)).toEqual(false);
   });
 
-  it('cant return the correct user info from state', () => {
+  it('can return the correct user info from state', () => {
     const state = {
       authReducer: {
         user: null
@@ -47,4 +47,21 @@ describe('selectors', () => {
   });
 
 
+  it('can return the correct groups array from state', () => {
+    const state = {
+      groupReducer: {
+        groups: null
+      }
+    };
+    expect(toGetGroupArray(state)).toEqual(null);
+  });
+
+  it('can return the current group from state', () => {
+    const state = {
+      currentGroupReducer: {
+        currentGroup: null
+      }
+    };
+    expect(toGetCurrentGroup(state)).toEqual(null);
+  });
 });

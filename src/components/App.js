@@ -1,16 +1,23 @@
 import React from 'react';
-import { useVerifyUser } from '../hooks/useVerifyUser';
-import { usePreview } from '../hooks/usePreview';
-import AdminGroupForm from './adminGroupForm/AdminGroupForm';
-import { AuthPage } from '../components/auth/AuthPage';
-
+import { BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import { AdminDataView } from './adminDataView/AdminDataView';
+import { AuthPage } from './auth/AuthPage';
+import { PrivateRoute } from './auth/PrivateRoute';
+import Header from '../components/header/Header';
+import { AdminGroupForm } from '../components/adminGroupForm/AdminGroupForm';
 
 export default function App() {
-  usePreview();
   return (
-    <>
-      <AuthPage /> 
-      <AdminGroupForm />
-    </>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path='/auth' component={AuthPage} />
+        <PrivateRoute exact path='/' component={AdminDataView} />
+        <PrivateRoute path='/make-group' component={AdminGroupForm} />
+      </Switch>
+    </Router>
   );
 }

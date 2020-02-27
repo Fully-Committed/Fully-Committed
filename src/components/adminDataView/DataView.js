@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { DevList } from './DevList';
-import { getDevCommits } from '../../services/adminDataViewServices';
 import { Dev } from './Dev';
+import { useGetCommits } from '../../hooks/useGetCommits';
 
 export const DataView = () => {
-  const [groupCommits, setGroupCommits] = useState();
+  const { handleGetCommits, groupCommits, dateInMS } = useGetCommits();
 
-  useEffect(() => {
-    getDevCommits(['jodinkansagor', 'joelpdurham', 'tess-jl', 'aaronedwardglenn'])
-      .then(groupCommits => {
-        console.log(groupCommits);
-        setGroupCommits(groupCommits);
-      });
-  }, []);
+  let sortedCommits;
+  if(groupCommits) {
+    sortedCommits = groupCommits.sort((dev1, dev2) => {
+      return dateInMS(dev1.date) - dateInMS(dev2.date);
+    });
+  }
 
-  const render = groupCommits ? groupCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
+  const render = groupCommits ? sortedCommits.map(dev => (<Dev key={dev.date} imageURL={dev.image} timestamp={dev.date} displayName={dev.name} repoName={dev.repoName} commitMessage={dev.message} />)) : <h1>LOADING</h1>;
 
   return (
     <>
       <h2>ACPs from groupName</h2>
-      <button>refresh</button>
+      <button onClick={handleGetCommits}>refresh</button>
       <div>
         {render}
       </div>

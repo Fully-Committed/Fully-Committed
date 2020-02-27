@@ -28,7 +28,7 @@ describe('loading reducer', () => {
     };
 
     const newState = loadingReducer(undefined, action);
-    expect(newState).toEqual({ loading: false });
+    expect(newState).toEqual({ loading: true });
   });
 
 
