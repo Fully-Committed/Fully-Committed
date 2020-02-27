@@ -6,6 +6,7 @@
 
   @media (min-width: 950px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
