@@ -3,6 +3,7 @@ import { Group } from './Group';
 import { useSelector, useDispatch } from 'react-redux';
 import { toGetUserSession, toGetGroupArray } from '../../selectors/useSelectors';
 import { setGroupArray } from '../../actions/groupActions';
+import styles from './GroupList.css';
 
 export const GroupList = () => {
   const dispatch = useDispatch();
@@ -15,10 +16,9 @@ export const GroupList = () => {
     }
   }, []);
 
-
   const listOfGroupElements = groupArray ? groupArray.map(group => (
     <li key={group._id}>
-      <Group {...group} />
+      <Group {...group } />
     </li>
   )) : <h1>Loading...</h1>;
 
@@ -31,3 +31,4 @@ export const GroupList = () => {
   );
 
 };
+
