@@ -17,13 +17,14 @@ export const AdminGroupForm = () => {
       .map(previewUser => previewUser._id);
   };
 
+  //THIS NEEDS TO BE A DIFFERENT FORM 
   const usersUpdatedToAdmins = updateUsersToAdmins(previewUsersArray); 
 
   //THIS WILL NOT WORK AS IS
-  const updateGroupWithNewAdmins = idsArray => {
-    console.log(idsArray, 'this is the ids array to update the group with');
-    return dispatch(updateGroupWithPreviewAdmins(idsArray));
-  };
+  // const updateGroupWithNewAdmins = idsArray => {
+  //   console.log(idsArray, 'this is the ids array to update the group with');
+  //   return dispatch(updateGroupWithPreviewAdmins(idsArray));
+  // };
 
   return (
     <>

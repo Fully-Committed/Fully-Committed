@@ -39,5 +39,5 @@ export const updateUserToAdmin = user => dispatch => {
 };
 
 //middleware to do a fetch to the backend
-export const updateGroupWithPreviewAdmins = () => {};
+// export const updateGroupWithPreviewAdmins = () => {};
 
