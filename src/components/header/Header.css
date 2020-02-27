@@ -36,3 +36,15 @@ header {
   }
 
 }
+
+@media (min-width: 950px) {
+  
+ header {
+   h1 {
+     width: 200px
+   }
+ }
+
+ 
+}
+ 
