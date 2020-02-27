@@ -24,6 +24,8 @@ export const getDevCommits = (arrayOfDevs) => {
           access_token
         });
       })
+      //two possible solutions
+      //.
       .then(commits => commits.json())
       .then(commits => commits[0])
       .then(commit => { 
