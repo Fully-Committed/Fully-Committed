@@ -1,4 +1,7 @@
-import { fetchDevsByName, fetchDevsByGitHubHandle } from "../services/adminGroupFormServices";
+import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev } from '../services/adminGroupFormServices';
+import { turnLoadingOn, turnLoadingOff } from '../actions/loadingActions';
+import { isHandleOnGitHub } from '../services/gitHubUserServices';
+
 
 export const SET_PREVIEW_GROUP_NAME = 'SET_PREVIEW_GROUP_NAME';
 export const setPreviewGroupName = previewName => ({
@@ -18,23 +21,36 @@ export const setSuggestedDevs = devs => ({
   payload: devs
 });
 export const setSuggestedDevsByName = name => dispatch => {
-  //when they first search, we clear the array
   dispatch(setSuggestedDevs([]));
   return fetchDevsByName(name)
     .then(devs => dispatch(setSuggestedDevs(devs)));
 };
 export const setSuggestedDevsByHandle = handle => dispatch => {
-  //when they first search, we clear the array
   dispatch(setSuggestedDevs([]));
   return fetchDevsByGitHubHandle(handle)
     .then(devs => dispatch(setSuggestedDevs(devs)));
 };
 
-// export const creaateDev = gitHubHandle => dispatch => {
-//   //dispatch(loadingstate) optional
-//   //call our dervice to hit the route on the backend for posting a dev 
-//   //.then(validatedDev => dispatch(addDev(validatedDev)))
-// };
+export const createDev = (handle, name) => dispatch => {
+  dispatch(turnLoadingOn());
+  return isHandleOnGitHub(handle)
+    .then(validatedDev => {
+      if(validatedDev) {
+        const devForPost = {
+          devGitHubHandle: handle,
+          devName: name
+        };
+        fetchPostNewDev(devForPost)
+          .then(dev => dispatch(addDev(dev)));
+      }
+      else {
+        throw Error({
+          message: 'This GitHub user handle does not exist', 
+          status: 404
+        }); 
+      }
+    });
+};
   
 export const REMOVE_DEV = 'REMOVE_DEV';
 export const removeDev = previewDev => ({

@@ -10,5 +10,5 @@ export const authorizeUser = (user, authFunction) => dispatch => {
       dispatch({ type: SET_USER_SESSION, payload: user });
       return dispatch(turnLoadingOff());
     })
-    .catch(error => dispatch({ type: SET_SESSION_ERROR, payload: error }));
+    .catch(authError => dispatch({ type: SET_SESSION_ERROR, payload: authError }));
 };

@@ -5,13 +5,15 @@ export const getGroups = (adminId) => {
     .then(res => res.json());
 };
 
-const access_token = document.cookie.split[1];
+const access_token = document.cookie.split('=')[1];
 
 export const getDevCommits = (arrayOfDevs) => {
   return Promise.all(arrayOfDevs.map(dev => {
     const results = { name: dev };
     return fetch(`https://api.github.com/users/${dev}/repos?sort=pushed`, {
-      access_token
+      headers: { 
+        'Authorization': `token ${access_token}`
+      }
     })
       .then(res => res.json())
       .then(repos => repos[0])
@@ -19,7 +21,9 @@ export const getDevCommits = (arrayOfDevs) => {
         results.repoName = repo.name;
         results.image = repo.owner.avatar_url;
         return fetch(`https://api.github.com/repos/${dev}/${repo.name}/commits?sha=dev`, {
-          access_token
+          headers: { 
+            'Authorization': `token ${access_token}`
+          }
         });
       })
       .then(commits => commits.json())

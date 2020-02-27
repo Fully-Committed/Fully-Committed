@@ -23,15 +23,15 @@ describe('auth reducer', () => {
     });
   });
 
-  it('handles an error action', () => {
+  it('handles an auth error action', () => {
     const action = {
       type: SET_SESSION_ERROR,
       payload: 'OH NO!!!!'
     };
 
-    const initialState = { error: null };
+    const initialState = { authError: null };
     const newState = authReducer(initialState, action);
-    expect(newState).toEqual({ error: 'OH NO!!!!' });
+    expect(newState).toEqual({ authError: 'OH NO!!!!' });
   });
 
   it('handles unrecognized action', () => {
@@ -42,7 +42,7 @@ describe('auth reducer', () => {
     const newState = authReducer(undefined, action);
     expect(newState).toEqual({
       user: null,
-      error: null
+      authError: null
     });
   });
 });

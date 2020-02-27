@@ -10,7 +10,7 @@ export const AddDevForm = () => {
   const [handle, setHandle] = useState('');
   const dispatch = useDispatch();
 
-  const { handleAddDevToPreview } = usePreview();
+  const { handleAddDevToPreview, handleAddDevHandleCheckAgainstGitHub } = usePreview();
 
   const devs = useSelector(toGetSuggestedDevs);
 
@@ -45,8 +45,12 @@ export const AddDevForm = () => {
   const buttonRender = () => {
     if(nameElements.length === 0 && handleElements.length === 0 && devName && handle) {
       return (
-        <button onClick={() => console.log('button has been clicked')
-        }>Add New Dev</button>
+        <button onClick={() => {
+          console.log(handle, devName, 'HANDLE AND DEV NAME ON OUR REAL BUTTON');
+          
+          handleAddDevHandleCheckAgainstGitHub(handle, devName);
+        }
+        }>Add New Dev(REAL BUTTON)</button>
       );
     }
     else {

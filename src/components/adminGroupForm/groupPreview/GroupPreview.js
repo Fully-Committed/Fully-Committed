@@ -6,15 +6,21 @@ import { usePreview } from '../../../hooks/usePreview';
 export const GroupPreview = () => {
   const groupName = useSelector(toGetPreviewGroupName);
   const previewDevsArray = useSelector(toGetPreviewDevs);
+  console.log(previewDevsArray, 'PREVIEW DEVS ARRAY');
+  
   const { handleRemoveDevFromPreview } = usePreview(); 
 
-  const listOfPreviewDevs = previewDevsArray.map(devPreview => (
-    <li key={devPreview._id}>
-      <p>{devPreview.devName}</p>
-      <p>{devPreview.devGitHubHandle}</p>
-      <button onClick={()=> handleRemoveDevFromPreview(devPreview)}>X</button>
-    </li>
-  ));
+  const listOfPreviewDevs = previewDevsArray.map(devPreview => {
+    console.log(devPreview, 'DEVPREVIEWWWW');
+    
+    return (
+      <li key={devPreview._id}>
+        <p>{devPreview.devName}</p>
+        <p>{devPreview.devGitHubHandle}</p>
+        <button onClick={()=> handleRemoveDevFromPreview(devPreview)}>X</button>
+      </li>
+    );
+  });
 
   return (
     <section>
