@@ -46,20 +46,20 @@ describe('group reducer', () => {
 
     const newState = groupsReducer(undefined, action);
     expect(newState).toEqual({
-      groups: null,
-      error: 'SHHHIIIIIIT'
+      groups: [],
+      groupError: 'SHHHIIIIIIT'
     });
   });
 
   it('handles default', () => {
     const action = {
       type: 'POOP'
-    }
+    };
 
     const newState = groupsReducer(undefined, action)
     expect(newState).toEqual({
-      groups: null, 
-      error: null
+      groups: [], 
+      groupError: null
     });
   });
 });
