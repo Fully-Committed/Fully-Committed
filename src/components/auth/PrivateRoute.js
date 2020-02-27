@@ -7,14 +7,14 @@ import { useVerifyUser } from '../../hooks/useVerifyUser';
 
 export const PrivateRoute = ({ component, path }) => {
   const user = useSelector(toGetUserSession);
-  const error = useSelector(toGetUserError);
+  const errorFromAuth = useSelector(toGetUserError);
   const history = useHistory();
 
   useVerifyUser();
-  if (!user && error) {
+  if (!user && errorFromAuth) {
     history.replace('/auth');
   }
-  if (!user && !error) return null;
+  if (!user && !errorFromAuth) return null;
 
 
   return <Route path={path} component={component} />;
