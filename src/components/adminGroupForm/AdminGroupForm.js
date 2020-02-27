@@ -3,12 +3,12 @@ import { GroupNameForm } from './groupNameForm/GroupNameForm';
 import { AddDevForm } from './addDev/AddDev';
 import { GroupPreview } from './groupPreview/GroupPreview';
 import { useSelector } from 'react-redux';
-import { toGetPreviewDevs, toGetUserSession } from '../../selectors/useSelectors';
-import { usePreview } from '../../hooks/usePreview';
+import { toGetPreviewDevs, toGetUserSession, toGetPreviewGroupName, toGetPreviewGroupDescription } from '../../selectors/useSelectors';
 
 export const AdminGroupForm = () => {
   const devsInGroupArray = useSelector(toGetPreviewDevs);
-  const { groupName, groupDescription } = usePreview(); 
+  const groupName = useSelector(toGetPreviewGroupName);
+  const groupDescription = useSelector(toGetPreviewGroupDescription);
   const admin = useSelector(toGetUserSession);
 
   const groupToPost = { 
@@ -20,6 +20,7 @@ export const AdminGroupForm = () => {
 
 
   const postGroup = () => {
+    console.log(groupToPost, 'this is the group to post');
     ///dispact action to POST a new group ////
   };
 
