@@ -9,7 +9,7 @@ export const getGroups = (adminId) => {
 const access_token = document.cookie.split('=')[1];
 
 export const getDevCommits = (arrayOfDevs) => {
-  console.log(arrayOfDevs)
+  console.log(access_token);
   return Promise.all(arrayOfDevs.map(dev => {
     const results = { name: dev };
     return fetch(`https://api.github.com/users/${dev}/repos?sort=pushed`, {
