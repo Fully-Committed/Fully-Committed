@@ -7,7 +7,6 @@ export const usePreview = () => {
   const [groupDescription, setGroupDescription] = useState('');
   const [, setGroupDev] = useState();
   const [, setPreviewDev] = useState(); 
-
   const dispatch = useDispatch();
 
   const handlePreviewNameChange = ({ target }) => {

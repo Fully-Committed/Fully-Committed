@@ -46,8 +46,6 @@ export const AddDevForm = () => {
     if(nameElements.length === 0 && handleElements.length === 0 && devName && handle) {
       return (
         <button onClick={() => {
-          console.log(handle, devName, 'HANDLE AND DEV NAME ON OUR REAL BUTTON');
-          
           handleAddDevHandleCheckAgainstGitHub(handle, devName);
         }
         }>Add New Dev(REAL BUTTON)</button>
@@ -62,7 +60,6 @@ export const AddDevForm = () => {
 
   return (
     <form onSubmit={() => event.preventDefault()}>
-
 
       <h1>Add Dev</h1>
       <h2>Dev Name: </h2>

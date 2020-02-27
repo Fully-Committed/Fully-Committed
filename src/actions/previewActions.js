@@ -47,7 +47,10 @@ export const createDev = (handle, name) => dispatch => {
           devName: name
         };
         fetchPostNewDev(devForPost)
-          .then(dev => dispatch(addDev(dev)));
+          .then(dev => {
+            dispatch(addDev(dev));
+            dispatch(turnLoadingOff());
+          });
       }
       else {
         throw Error({
@@ -63,12 +66,3 @@ export const removeDev = previewDev => ({
   type: REMOVE_DEV,
   payload: previewDev
 });
-
-
-//same sort of thing for group that we will post --> in reducer that is shared with home
-
-// export const creaateDev = gitHubHandle => dispatch => {
-//   //dispatch(loadingstate) optional
-//   //call our dervice to hit the route on the backend for posting a dev 
-//   //.then(validatedDev => dispatch(addDev(validatedDev)))
-// };

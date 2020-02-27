@@ -1,5 +1,6 @@
 import { turnLoadingOn, turnLoadingOff } from './loadingActions';
 import { getGroups } from '../services/adminDataViewServices';
+import { fetchPostNewGroup } from '../services/adminGroupFormServices';
 
 
 export const SET_GROUP_SESSION = 'SET_GROUP_SESSION';
@@ -19,4 +20,19 @@ export const setGroupArray = adminId => dispatch => {
       type: SET_GROUP_ERROR,
       payload: groupError
     }));
+};
+
+export const ADD_GROUP = 'ADD_GROUP';
+export const addGroup = previewGroup => ({
+  type: ADD_GROUP, 
+  payload: previewGroup
+});
+
+export const createGroup = groupToPost => dispatch => {
+  dispatch(turnLoadingOn());
+  return fetchPostNewGroup(groupToPost)
+    .then(group => {
+      dispatch(addGroup(group));
+      dispatch(turnLoadingOff());
+    });
 };

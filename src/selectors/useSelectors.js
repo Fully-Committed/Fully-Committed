@@ -22,6 +22,7 @@ export const toGetGroupArray = state => state.groupReducer.groups;
 
 export const toGetGroupError = state => state.groupReducer.groupError;
 
+
 export const toGetCurrentGroup = state => state.currentGroupReducer.currentGroup;
 
 export const toGetUserError = state => state.authReducer.authError;
