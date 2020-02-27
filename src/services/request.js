@@ -1,5 +1,5 @@
 export const request = (path, method, body) => {
-  return fetch(`http://localhost:7891${path}`, {
+  return fetch(`${process.env.MONGODEB_URI}${path}`, {
     method,
     headers: {
       'Content-Type': 'application/json'
