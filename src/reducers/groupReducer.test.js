@@ -46,7 +46,7 @@ describe('group reducer', () => {
 
     const newState = groupReducer(undefined, action);
     expect(newState).toEqual({
-      groups: null,
+      groups: [],
       groupError: 'SHHHIIIIIIT'
     });
   });
@@ -58,7 +58,7 @@ describe('group reducer', () => {
 
     const newState = groupReducer(undefined, action)
     expect(newState).toEqual({
-      groups: null, 
+      groups: [], 
       groupError: null
     });
   });

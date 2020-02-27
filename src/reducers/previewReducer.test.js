@@ -46,7 +46,8 @@ describe('Preview Reducer', () => {
       previewDevs: [
         { _id: '1234', devName: 'tess', devGitHubHandle: '@tess-jl'  },
         { _id: '1235', devName: 'aaron', devGitHubHandle: '@aaronedwardglenn'  },
-      ] 
+      ],
+      suggestedDevs: []
     });
   }); 
 
