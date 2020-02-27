@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { authReducer } from './authReducer';
-import { groupReducer } from './groupReducer';
+import { groupsReducer } from './groupsReducer';
 import { loadingReducer } from './loadingReducer';
 import { previewReducer } from './previewReducer';
 import { currentGroupReducer } from './currentGroupReducer';
@@ -10,5 +10,5 @@ export default combineReducers({
   authReducer,
   loadingReducer, 
   previewReducer,
-  groupReducer
+  groupsReducer
 });

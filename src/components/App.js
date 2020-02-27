@@ -8,6 +8,7 @@ import { AuthPage } from './auth/AuthPage';
 import { PrivateRoute } from './auth/PrivateRoute';
 import Header from '../components/header/Header';
 import { AdminGroupForm } from '../components/adminGroupForm/AdminGroupForm';
+import './App.css';
 
 export default function App() {
   return (

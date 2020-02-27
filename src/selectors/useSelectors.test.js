@@ -49,7 +49,7 @@ describe('selectors', () => {
 
   it('can return the correct groups array from state', () => {
     const state = {
-      groupReducer: {
+      groupsReducer: {
         groups: null
       }
     };

@@ -56,7 +56,7 @@ describe('group reducer', () => {
       type: 'POOP'
     };
 
-    const newState = groupsReducer(undefined, action);
+    const newState = groupsReducer(undefined, action)
     expect(newState).toEqual({
       groups: [], 
       groupError: null
