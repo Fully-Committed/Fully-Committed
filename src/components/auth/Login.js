@@ -2,7 +2,6 @@ import React from 'react';
 import { useAuthForm } from '../../hooks/useAuthForm';
 
 export const Login = () => {
-
   const { email, password, setEmail, setPassword, handleSubmit } = useAuthForm('login');
 
   return (
@@ -12,7 +11,6 @@ export const Login = () => {
         <label>Password: <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} /></label>
         <button>Login</button>
       </form>
-
     </>
   );
 
