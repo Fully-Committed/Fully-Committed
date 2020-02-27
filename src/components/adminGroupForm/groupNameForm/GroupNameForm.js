@@ -7,8 +7,9 @@ export const GroupNameForm = () => {
 
   return (
     <form className={styles.nameForm} onSubmit={handleInfoSubmit}>
-      <label>Group Name<input type="text" required placeholder='FSJS Fall 2019'onChange={handlePreviewNameChange} /></label> 
-      <label>Group Description<input type="text" placeholder='The best cohort ever' onChange={handlePreviewDescriptionChange} /></label>
+      <h2>Group Information</h2>
+      <label>Group Name:<input type="text" required placeholder='FSJS Fall 2019'onChange={handlePreviewNameChange} /></label> 
+      <label>Group Description:<input type="text" placeholder='The best cohort ever' onChange={handlePreviewDescriptionChange} /></label>
       <button>Set Group Information</button>
     </form>
   );

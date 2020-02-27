@@ -24,7 +24,7 @@ export const GroupPreview = () => {
 
   return (
     <section className={styles.preview}>
-      <h2>Group Preview</h2>
+      <h1>Group Preview</h1>
       <section className={styles.previewWorkArea}>
         <section className={styles.groupnamepreview}>
           <section className={styles.individualpreview}>

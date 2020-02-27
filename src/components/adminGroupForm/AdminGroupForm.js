@@ -4,10 +4,10 @@ import { AddDevForm } from './addDev/AddDev';
 import { GroupPreview } from './groupPreview/GroupPreview';
 import { useSelector, useDispatch } from 'react-redux';
 import { toGetPreviewDevs, toGetUserSession, toGetPreviewGroupName, toGetPreviewGroupDescription } from '../../selectors/useSelectors';
-import { createGroup } from '../../actions/groupActions';
+import { createGroup } from '../../actions/previewActions';
 import { Link } from 'react-router-dom';
 import styles from './AdminGroupForm.css';
-import { createGroup } from '../../actions/previewActions';
+
 
 export const AdminGroupForm = () => {
   const devsInGroupArray = useSelector(toGetPreviewDevs);
@@ -29,15 +29,16 @@ export const AdminGroupForm = () => {
 
   return (
     <section className={styles.wholeform}>
-      <section className={styles.group}>
+      <section className={styles.formNoButton}>
         <GroupNameForm />
-        <AddDevForm />
+        <section className={styles.group}>
+          <AddDevForm />
+          <section className={styles.preview}>
+            <GroupPreview />
+          </section>
+        </section>
       </section>
-      <section className={styles.preview}>
-        <GroupPreview />
-      </section>
-      <Link to='/'><button className={styles.createGroupButton} onClick={() => postGroup(groupToPost)}>Create Group</button></Link>
-
+      <button className={styles.createGroupButton} onClick={() => postGroup(groupToPost)}><Link to='/'>Create Group</Link></button>
     </section>
   );
 };
