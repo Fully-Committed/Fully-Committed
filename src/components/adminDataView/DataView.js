@@ -6,7 +6,6 @@ import styles from './DataView.css';
 export const DataView = () => {
   const { handleGetCommits, groupCommits, dateInMS, currentGroup } = useGetCommits();
 
-  console.log(currentGroup, 'CURRENT GROUP');
 
 
   let sortedCommits;
