@@ -10,6 +10,14 @@
   flex-direction: column;
 }
 
+.devRepo, .devMessage {
+  width: 120px;
+}
+
+.devTime {
+  width: 165px;
+}
+
 .devNameAndPic {
   margin-right: 10px;
   margin-left: 5px;
