@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { toGetUserSession } from '../../selectors/useSelectors' 
+import { toGetUserSession } from '../../selectors/useSelectors';
 import { useLogout } from '../../hooks/useLogout';
 
 const Header = () => {
