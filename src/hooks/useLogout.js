@@ -1,5 +1,6 @@
 import { logoutUser } from '../services/authServices';
 
+
 export const useLogout = () => {
   const handleLogout = () => {
     const cookies = document.cookie.split(';');
@@ -12,4 +13,4 @@ export const useLogout = () => {
       .then(window.location.href = ('/auth'));
   };
   return { handleLogout };
-}
+};

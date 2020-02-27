@@ -16,8 +16,8 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path='/auth' component={AuthPage} />
+        <PrivateRoute exact path='/make-group' component={AdminGroupForm} />
         <PrivateRoute exact path='/' component={AdminDataView} />
-        <PrivateRoute path='/make-group' component={AdminGroupForm} />
       </Switch>
     </Router>
   );

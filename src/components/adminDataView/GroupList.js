@@ -15,7 +15,6 @@ export const GroupList = () => {
       dispatch(setGroupArray(user._id));
     }
   }, []);
-
   const listOfGroupElements = groupArray ? groupArray.map(group => (
     <li key={group._id}>
       <Group {...group } />
