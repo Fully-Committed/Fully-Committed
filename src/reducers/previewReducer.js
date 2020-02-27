@@ -7,7 +7,7 @@ import {
 } from '../actions/previewActions';
 
 const initialState = { 
-  previewName: 'New Group',
+  previewName: null,
   previewDescription: '',
   previewDevs: [], 
   suggestedDevs: []
@@ -31,4 +31,3 @@ export const previewReducer = (state = initialState, action) => {
   }
 };
 
-//CREATE_DEV
