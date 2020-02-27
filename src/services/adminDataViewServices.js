@@ -7,6 +7,17 @@ export const getGroups = (adminId) => {
     .then(res => res.json());
 };
 
+const handleMissingDevBranch = () => ([
+  {
+    commit: {
+      author: {
+        date: new Date('December 10, 1988').toString()
+      },
+      message: 'NO DEV BRANCH'
+    }
+  }
+]);
+
 export const getDevCommits = (arrayOfDevs) => {
   return Promise.all(arrayOfDevs.map(dev => {
     const results = { name: dev.name };
@@ -27,6 +38,10 @@ export const getDevCommits = (arrayOfDevs) => {
         });
       })
       .then(commits => commits.json())
+      .then(commits => {
+        if(commits.message === 'Not Found') commits = handleMissingDevBranch();
+        return commits;
+      })
       .then(commits => commits[0])
       .then(commit => { 
         results.date = commit.commit.author.date;
