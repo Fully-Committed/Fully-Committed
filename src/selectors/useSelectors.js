@@ -17,9 +17,11 @@ export const toGetSuggestedDevs = state => {
   return suggestedDevs.filter(dev => !previewDevs.includes(dev._id));
 };
 
-//selectors for groupsReducer
-export const toGetGroupArray = state => state.groupReducer.groups;
-export const toGetCurrentGroup = state => state.currentGroupReducer.currentGroup;
-export const toGetUserError = state => state.authReducer.error;
 
+export const toGetGroupArray = state => state.groupReducer.groups;
+export const toGetGroupError = state => state.groupReducer.groupError;
+
+export const toGetCurrentGroup = state => state.currentGroupReducer.currentGroup;
+
+export const toGetUserError = state => state.authReducer.authError;
 
