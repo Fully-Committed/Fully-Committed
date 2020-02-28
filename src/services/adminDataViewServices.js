@@ -1,5 +1,16 @@
-let access_token = null;
-export const setAccesToken = token => access_token = token;
+// let access_token = null;
+// export const setAccesToken = token => access_token = token;
+
+const access_token = localStorage.getItem('token');
+
+export const isHandleOnGitHub = handle => {
+  return fetch(`https://api.github.com/users/${handle}`, {
+    headers: {
+      'Authorization': `token ${access_token}`
+    }
+  })
+    .then(res => res.json());
+};
 
 export const getGroups = (adminId) => {
   return fetch(`${process.env.API_URL}/api/v1/group/groups-by-admin/${adminId}`, {
@@ -25,10 +36,10 @@ const getAllCommitData = (commits) => ({
   dates: commits.map(commitObj => commitObj.commit.author.date)
 });
 
+
+
 export const getDevCommits = (arrayOfDevs) => {
-  console.log('DEVS', arrayOfDevs);
   return Promise.all(arrayOfDevs.map(dev => {
-    console.log('Single DEV', dev.name);
     const results = { name: dev.name };
     return fetch(`https://api.github.com/users/${dev.gitHubHandle}/repos?sort=pushed`, {
       headers: {
@@ -38,7 +49,7 @@ export const getDevCommits = (arrayOfDevs) => {
       .then(res => res.json())
       .then(repos => repos[0])
       .then(repo => {
-        console.log('repo', repo)
+        console.log('repo', repo);
         results.repoName = repo.name;
         results.image = repo.owner.avatar_url;
         return fetch(`https://api.github.com/repos/${dev.gitHubHandle}/${repo.name}/commits?sha=dev`, {

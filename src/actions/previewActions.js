@@ -1,6 +1,6 @@
 import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev, fetchPostNewGroup } from '../services/adminGroupFormServices';
 import { turnLoadingOn, turnLoadingOff } from '../actions/loadingActions';
-import { isHandleOnGitHub } from '../services/gitHubUserServices';
+import { isHandleOnGitHub } from '../services/adminDataViewServices';
 
 
 export const SET_PREVIEW_GROUP_NAME = 'SET_PREVIEW_GROUP_NAME';
@@ -41,6 +41,7 @@ export const createDev = (handle, name) => dispatch => {
   dispatch(turnLoadingOn());
   return isHandleOnGitHub(handle)
     .then(validatedDev => {
+      console.log('this is the value returned from isHandleOnGitHub', validatedDev);
       if(validatedDev) {
         const devForPost = {
           devGitHubHandle: handle,
