@@ -36,7 +36,6 @@ export const usePreview = () => {
   const handleAddDevHandleCheckAgainstGitHub = (gitHubHandle, name) => {
     return dispatch(createDev(gitHubHandle, name))
       .then(dev => {
-        console.log('usePreview, what is returned from createDev dispatch', dev);
         setGroupDev(dev);
       });
   }; 
