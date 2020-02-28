@@ -41,6 +41,7 @@ export const createDev = (handle, name) => dispatch => {
   dispatch(turnLoadingOn());
   return isHandleOnGitHub(handle)
     .then(validatedDev => {
+      console.log('this is the value returned from isHandleOnGitHub', validatedDev);
       if(validatedDev) {
         const devForPost = {
           devGitHubHandle: handle,
