@@ -8,7 +8,6 @@ export const Token = () => {
     const params = new URLSearchParams(location.search);
     const token = params.get('token');
     if(token) localStorage.setItem('token', token);
-    if(token) setAccesToken(token);
     window.location.href = './';
   }, []);
 
