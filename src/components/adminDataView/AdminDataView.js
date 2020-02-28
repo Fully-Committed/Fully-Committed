@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { GroupList } from './GroupList';
 import { DataView } from './DataView';
 import styles from './AdminDataView.css';
-import { useLocation } from 'react-router-dom';
-import { setAccesToken } from '../../services/adminDataViewServices';
-
+// import { useLocation } from 'react-router-dom';
 
 export const AdminDataView = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const token = params.get('token');
-    console.log('token in useEffect', token);
-    localStorage.setItem('token', token);
-    if(token) setAccesToken(token);
-  }, []);
+  // useEffect(() => {
+  //   const params = new URLSearchParams(location.search);
+  //   const token = params.get('token');
+  //   if(token) {
+  //     localStorage.setItem('token', token);
+  //     window.location.href = './';
+  //   }
+  // }, []);
   
   return (
     <section className={styles.admindata}>
