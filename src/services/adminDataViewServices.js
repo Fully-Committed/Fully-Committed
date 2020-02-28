@@ -49,7 +49,6 @@ export const getDevCommits = (arrayOfDevs) => {
       .then(res => res.json())
       .then(repos => repos[0])
       .then(repo => {
-        console.log('repo', repo);
         results.repoName = repo.name;
         results.image = repo.owner.avatar_url;
         return fetch(`https://api.github.com/repos/${dev.gitHubHandle}/${repo.name}/commits?sha=dev`, {

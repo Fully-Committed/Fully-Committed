@@ -35,7 +35,9 @@ export const usePreview = () => {
 
   const handleAddDevHandleCheckAgainstGitHub = (gitHubHandle, name) => {
     return dispatch(createDev(gitHubHandle, name))
-      .then(dev => setGroupDev(dev));
+      .then(dev => {
+        setGroupDev(dev);
+      });
   }; 
 
 
