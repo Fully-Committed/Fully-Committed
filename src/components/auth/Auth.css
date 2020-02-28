@@ -4,6 +4,7 @@
   justify-content: center;
   height: 120px;
   align-items: center;
+  font-family: 'Hind';
 
 .authLinks {
   display: flex;
@@ -11,6 +12,8 @@
   align-content: space-between;
   justify-content: space-evenly;
   border: 1px solid slategray;
+  border-radius: 5px;
+  margin: 10px;
 
   a {
     text-align: center;
@@ -33,16 +36,38 @@ form {
   flex-direction: column;
   align-items: flex-end;
   height: 120px;
-  border: 1px solid slategray;
   width: 298px;
+  border: 1px solid slategrey;
   
   button {
     justify-self: flex-end;
   }
 
-  input {
-    margin: 2px;
-  }
   
 }
+}
+
+.loginsignup {
+  padding: 5px;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  height: 150px;
+  justify-content: space-between;
+  color: slategrey;
+  font-family: 'Hind';
+  label {
+    margin: 5px
+  }
+}
+
+@media (min-width: 950px) {
+  .loginsignup {
+    width: 300px
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
