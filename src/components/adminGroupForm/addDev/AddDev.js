@@ -48,7 +48,7 @@ export const AddDevForm = () => {
   };
 
   const buttonRender = () => {
-    if (nameElements.length === 0 && handleElements.length === 0 && devName && handle) {
+    if(nameElements.length === 0 && handleElements.length === 0 && devName && handle) {
       return (
         <button onClick={() => {
           handleAddDevHandleCheckAgainstGitHub(handle, devName);
