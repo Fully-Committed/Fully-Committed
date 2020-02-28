@@ -73,12 +73,19 @@ export const clearState = () => ({
   type: CLEAR_STATE
 });
 
+export const CREATE_GROUP = 'CREATE_GROUP';
+
 export const createGroup = groupToPost => dispatch => {
   dispatch(turnLoadingOn());
   return fetchPostNewGroup(groupToPost)
-    .then(() => {
+    .then((group) => {
       dispatch(clearState());
+      dispatch({ 
+        type: CREATE_GROUP,
+        payload: group 
+      });
       dispatch(turnLoadingOff());
-    });
+    })
+    
 };
 
