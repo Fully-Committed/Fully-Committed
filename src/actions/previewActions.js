@@ -1,6 +1,6 @@
 import { fetchDevsByName, fetchDevsByGitHubHandle, fetchPostNewDev, fetchPostNewGroup } from '../services/adminGroupFormServices';
 import { turnLoadingOn, turnLoadingOff } from '../actions/loadingActions';
-import { isHandleOnGitHub } from '../services/gitHubUserServices';
+import { isHandleOnGitHub } from '../services/adminDataViewServices';
 
 
 export const SET_PREVIEW_GROUP_NAME = 'SET_PREVIEW_GROUP_NAME';

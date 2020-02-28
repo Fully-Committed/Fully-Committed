@@ -52,6 +52,8 @@ export const AddDevForm = () => {
       return (
         <button onClick={() => {
           handleAddDevHandleCheckAgainstGitHub(handle, devName);
+          setDevName(''); 
+          setHandle('');
         }
         } className={styles.active}>Add New Dev</button>
       );
