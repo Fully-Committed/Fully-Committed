@@ -72,14 +72,14 @@ export const AddDevForm = () => {
         <section className={styles.enterName}>
           <h2>Dev Name: </h2>
           <input type="search" value={devName} onChange={handleNameChange} />
-          <ul>
+          <ul className={styles.chooseDev}>
             {nameElements}
           </ul>
         </section>
         <section className={styles.enterName}>
           <h2>Github Handle</h2>
           <input type="search" value={handle} onChange={handleHandleChange} />
-          <ul>
+          <ul className={styles.chooseDev}>
             {handleElements}
           </ul>
         </section>

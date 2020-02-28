@@ -25,6 +25,11 @@ form {
       margin: 0px;
       font-size: 18px;
     }
+
+    .chooseDev {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .enterName {
