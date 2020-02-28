@@ -1,0 +1,61 @@
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  p {
+    font-size: 12px;
+    width: 375px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .adddev {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    h2 {
+      margin: 0px;
+      font-size: 18px;
+    }
+  }
+
+  .enterName {
+    margin: 5px;
+    height: 200px;
+  }
+
+  button {
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+
+    &:hover {
+      color: slategray;
+      background-color: white;
+    }
+
+  }
+
+  .inactive {
+    opacity: 20%;
+  }
+
+  .active {
+    opacity: 100%;
+  }
+
+  .previewDevName {
+    font-family: 'hind';
+  }
+}

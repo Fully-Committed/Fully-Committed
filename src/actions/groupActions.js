@@ -22,17 +22,3 @@ export const setGroupArray = adminId => dispatch => {
     }));
 };
 
-export const ADD_GROUP = 'ADD_GROUP';
-export const addGroup = previewGroup => ({
-  type: ADD_GROUP, 
-  payload: previewGroup
-});
-
-export const createGroup = groupToPost => dispatch => {
-  dispatch(turnLoadingOn());
-  return fetchPostNewGroup(groupToPost)
-    .then(() => {
-      // dispatch(addGroup(group));
-      dispatch(turnLoadingOff());
-    });
-};

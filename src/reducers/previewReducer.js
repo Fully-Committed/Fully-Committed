@@ -3,7 +3,8 @@ import {
   ADD_DEV,
   REMOVE_DEV,
   SET_SUGGESTED_DEVS, 
-  SET_PREVIEW_GROUP_DESCRIPTION
+  SET_PREVIEW_GROUP_DESCRIPTION, 
+  CLEAR_STATE
 } from '../actions/previewActions';
 
 const initialState = { 
@@ -15,6 +16,8 @@ const initialState = {
 
 export const previewReducer = (state = initialState, action) => {
   switch(action.type) {
+    case CLEAR_STATE: 
+      return initialState;
     case SET_PREVIEW_GROUP_NAME:
       return { ...state, previewName: action.payload };
     case SET_PREVIEW_GROUP_DESCRIPTION:

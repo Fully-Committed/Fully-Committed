@@ -3,7 +3,7 @@ import { Group } from './Group';
 import { useSelector, useDispatch } from 'react-redux';
 import { toGetUserSession, toGetGroupArray } from '../../selectors/useSelectors';
 import { setGroupArray } from '../../actions/groupActions';
-import styles from './GroupList.css';
+import './GroupList.css';
 
 export const GroupList = () => {
   const dispatch = useDispatch();

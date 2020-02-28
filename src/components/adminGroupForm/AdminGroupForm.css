@@ -1,0 +1,45 @@
+.wholeform {
+  display: flex;
+  flex-direction: column;
+
+
+
+  .createGroupButton {
+    display: block;
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 93px;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    
+  }
+  
+  @media (min-width: 950px) {
+    .formNoButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%
+    }
+    
+    .createGroupButton {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 200px;
+  }
+
+  .group { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+}
+

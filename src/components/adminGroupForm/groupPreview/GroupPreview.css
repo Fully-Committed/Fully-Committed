@@ -1,0 +1,71 @@
+.preview {
+  font-family: 'Hind';
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  h2, h1 {
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+    margin-top: 26px;
+  }
+
+  .groupnamepreview {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+  .individualpreview {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.previewWorkArea {
+  border: 1px solid slategray;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.previewLi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 5px;
+  line-height: 20px;
+  button {
+    color: white;
+    background-color: slategray;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    
+    &:hover {
+      color: slategray;
+      background-color: white;
+      cursor: pointer;
+    }
+  
+  }
+
+  .previewDevName {
+    font-family: 'hind';
+  }
+
+}
+
+  @media (min-width: 950px) {
+    .preview {
+          width: 450px;
+  }
+}
