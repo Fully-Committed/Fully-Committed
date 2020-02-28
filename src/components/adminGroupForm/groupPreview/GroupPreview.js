@@ -37,7 +37,7 @@ export const GroupPreview = () => {
             <p>{groupDescription}</p>
           </section>
         </section>
-        <ul>
+        <ul className={styles.previewList}>
           {listOfPreviewDevs}
         </ul>
       </section>
