@@ -7,8 +7,6 @@ export const useGetCommits = () => {
   const [groupCommits, setGroupCommits] = useState();
   const currentGroup = useSelector(toGetCurrentGroup);
 
-  console.log(currentGroup, 'ON HOOK')
-
   useEffect(() => {
     handleGetCommits();
   }, [currentGroup]);

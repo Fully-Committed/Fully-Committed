@@ -21,12 +21,12 @@ export const AuthPage = () => {
     <Router>
       <section className={styles.AuthPage}>
         <Route path='/auth' component={AuthLinks} />
-        <Switch>
-          <Route exact path='/auth/signup' component={Signup} />
-          <Route exact path='/auth/login' component={Login} />
-        </Switch>
-        {errorMessage}
       </section>
+      <Switch>
+        <Route exact path='/auth/signup' component={Signup} />
+        <Route exact path='/auth/login' component={Login} />
+      </Switch>
+      {errorMessage}
     </Router>
   );
 

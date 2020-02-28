@@ -23,6 +23,8 @@ header {
     position: fixed;
     bottom: 5px;
     right: 5px;
+    font-size: 14px;
+
 
     &:hover {
       color:white;
