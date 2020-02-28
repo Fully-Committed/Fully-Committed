@@ -11,6 +11,7 @@ import { AdminGroupForm } from '../components/adminGroupForm/AdminGroupForm';
 import { Footer } from '../components/Footer/Footer';
 import './App.css';
 import { AboutUs } from './Footer/AboutUs';
+import { Token } from './Token';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <PrivateRoute exact path='/make-group' component={AdminGroupForm} />
         <PrivateRoute exact path='/' component={AdminDataView} />
         <Route path='/aboutus' component={AboutUs} />
+        {/* <PrivateRoute path='/get-token/' component={Token} /> */}
       </Switch>
       <Footer />
     </Router>
