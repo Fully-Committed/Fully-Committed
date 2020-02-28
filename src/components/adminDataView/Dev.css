@@ -12,6 +12,7 @@
 
 .devRepo, .devMessage {
   width: 120px;
+  width: 165px;
 }
 
 .devTime {
@@ -21,6 +22,7 @@
 .devNameAndPic {
   margin-right: 10px;
   margin-left: 5px;
+  width: 50px;
 }
 
 .devRepo {
