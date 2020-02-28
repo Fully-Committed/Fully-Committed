@@ -9,7 +9,7 @@ const initialState = {
 export const groupsReducer = (state = initialState, action) => {
   switch(action.type) {
     case CREATE_GROUP:
-      return { ...state, group: [...state.group, action.payload] };
+      return { ...state, groups: [...state.groups, action.payload] };
     case SET_GROUP_SESSION:
       return { ...state, groups: action.payload };
     case SET_GROUP_ERROR:
