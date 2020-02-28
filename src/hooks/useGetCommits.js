@@ -19,7 +19,7 @@ export const useGetCommits = () => {
   };
 
   const handleGetCommits = () => {
-    if (currentGroup) {
+    if(currentGroup) {
       const groupNames = currentGroup.map(dev => (
         {
           name: dev.devName,
