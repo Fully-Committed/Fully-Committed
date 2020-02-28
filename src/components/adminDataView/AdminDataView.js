@@ -12,6 +12,8 @@ export const AdminDataView = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const token = params.get('token');
+    console.log('token in useEffect', token);
+    localStorage.setItem('token', token);
     if(token) setAccesToken(token);
   }, []);
   
