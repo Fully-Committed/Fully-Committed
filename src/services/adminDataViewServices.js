@@ -2,7 +2,6 @@
 // export const setAccesToken = token => access_token = token;
 
 const access_token = localStorage.getItem('token');
-console.log('token in services', access_token);
 
 export const isHandleOnGitHub = handle => {
   return fetch(`https://api.github.com/users/${handle}`, {
