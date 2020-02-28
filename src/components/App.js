@@ -22,7 +22,7 @@ export default function App() {
         <PrivateRoute exact path='/make-group' component={AdminGroupForm} />
         <PrivateRoute exact path='/' component={AdminDataView} />
         <Route path='/aboutus' component={AboutUs} />
-        {/* <PrivateRoute path='/get-token/' component={Token} /> */}
+        <PrivateRoute path='/get-token' component={Token} />
       </Switch>
       <Footer />
     </Router>
